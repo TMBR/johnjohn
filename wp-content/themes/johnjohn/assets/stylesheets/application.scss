@@ -1,0 +1,134 @@
+
+/* ======== CORE VARIABLES & MIXINS ======== */
+
+@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_variables.scss";
+@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_mixins.scss";
+
+
+/* ======== RESET ======== */
+
+@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_normalize.scss";
+// @import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_print.scss";
+
+
+/* ======== CORE CSS ======== */
+
+@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_scaffolding.scss";
+@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_type.scss";
+@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_code.scss";
+@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_grid.scss";
+@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_tables.scss";
+@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_forms.scss";
+@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_buttons.scss";
+
+
+/* ======== BOOTSTRAP COMPONENTS ======== */
+
+@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_component-animations.scss";
+// @import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_glyphicons.scss";
+@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_dropdowns.scss";
+@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_button-groups.scss";
+@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_input-groups.scss";
+@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navs.scss";
+@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_navbar.scss";
+@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_breadcrumbs.scss";
+@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_pagination.scss";
+@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_pager.scss";
+@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_labels.scss";
+@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_badges.scss";
+// @import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_jumbotron.scss";
+// @import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_thumbnails.scss";
+@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_alerts.scss";
+// @import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_progress-bars.scss";
+// @import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_media.scss";
+@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_list-group.scss";
+// @import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_panels.scss";
+// @import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_wells.scss";
+@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_close.scss";
+
+
+/* ======== COMPONENTS WITH JAVASCRIPT ========
+
+@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_modals.scss";
+@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_tooltip.scss";
+@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_popovers.scss";
+@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_carousel.scss"; */
+
+
+/* ======== UTILITY CLASSES ======== */
+
+@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_utilities.scss";
+@import "../vendor/twbs-bootstrap-sass/vendor/assets/stylesheets/bootstrap/_responsive-utilities.scss";
+
+
+
+
+/* ======== FONTS ======== */
+
+@import '../vendor/font-awesome/scss/font-awesome'; // #### have to copy fonts to public folder
+@import 'tmbricons.scss'; // This is built by the `iconfont` gulp task
+
+
+/* ======== VENDOR STYLES ======== */
+
+
+@import '../vendor/magnific-popup/src/css/main';
+
+
+/* ======== VENDOR STYLES - Copied & Pasted (scss not provided) ======== */
+
+@import "vendor/video-js";
+@import "vendor/animate";
+@import "vendor/flexslider"; /* #### have to rename file to sass - move fonts to public */
+
+
+/**
+* =========== THEME STYLES ==============
+*
+*
+*   # GLOBAL
+*   - variables
+*   - mixins
+*   - keyframes
+*
+*   # BASE
+*   - reset / vendor fix
+*   - main (body / typography / color classes)
+*   - layout (align / margin classes)
+*
+*   # COMPONENTS
+*   - buttons / form elements
+*   - preloader
+*
+*   # LAYOUT
+*   - header / footer
+*
+*
+*/
+
+
+/* Global */
+@import "global/variables";
+@import "global/mixins";
+@import "global/keyframes";
+
+/* Base */
+@import "base/reset";
+@import "base/vendor-fix";
+@import "base/main";
+@import "base/layout";
+
+/* Components */
+@import "components/buttons";
+@import "components/forms";
+@import "components/preloader";
+
+/* Layout */
+@import "layout/header";
+@import "layout/footer";
+
+/* Templates */
+@import "templates/home";
+
+
+

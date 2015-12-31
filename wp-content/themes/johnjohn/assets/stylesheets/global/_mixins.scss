@@ -1,0 +1,335 @@
+/*
+Set Border radious for any element
+@include border-radius(0px);
+--------------------- */
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+
+/*
+opacity filter with x-browser fallback
+@include opacity(.9);
+--------------------- */
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+/*
+letter-spacing to match PSD
+@include spacing(99);
+--------------------- */
+@mixin spacing($ls) {
+  letter-spacing: $ls*0.001em;
+}
+
+
+/*
+Truncate text
+--------------------- */
+@mixin text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/*
+Transform
+@include transform(translateY(-50%));
+--------------------- */
+@mixin transform( $transform-props ) {
+  -webkit-transform: $transform-props;
+  -moz-transform: $transform-props;
+  -ms-transform: $transform-props;
+  -o-transform: $transform-props;
+  transform: $transform-props;
+}
+
+
+/*
+Background size with broswer prefix for cover image
+@include cover-background(path/to/img.jpg);
+--------------------- */
+@mixin cover-background($img-uri) {
+    background: url($img-uri) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/*
+Background size with broswer prefix for cover
+@include background-cover(cover);
+--------------------- */
+@mixin background-cover($size) {
+    -webkit-background-size: $size;
+    -moz-background-size: $size;
+    -o-background-size: $size;
+    background-size: $size;
+}
+
+// Options
+//
+// $screen-xs: 480px
+// $screen-sm: 768px
+// $screen-md: 992px
+// $screen-lg: 1200px
+//
+
+@mixin respond-to($breakpoint) {
+  @media all and (max-width: ($breakpoint - 1)) {
+    @content
+  }
+}
+
+@mixin respond-between($min, $max) {
+  @media all and (min-width:$min) and (max-width:$max - 1) {
+    @content
+  }
+}
+
+/*
+CSS Arrow Shape
+@include arrow-right(10px, $blue);
+--------------------- */
+@mixin arrow-down($size, $color) {
+  height: 0;
+  width: 0;
+  border-top: $size solid $color;
+  border-right: $size solid transparent;
+  border-left: $size solid transparent;
+  border-bottom: 0 solid transparent;
+}
+
+@mixin arrow-up($size, $color) {
+  height: 0;
+  width: 0;
+  border-bottom: $size solid $color;
+  border-right: $size solid transparent;
+  border-left: $size solid transparent;
+  border-top: 0 solid transparent;
+}
+
+@mixin arrow-left($size, $color) {
+  height: 0;
+  width: 0;
+  border-right: $size solid $color;
+  border-top: $size solid transparent;
+  border-bottom: $size solid transparent;
+  border-left: 0 solid transparent;
+}
+
+@mixin arrow-right($size, $color) {
+  height: 0;
+  width: 0;
+  border-left: $size solid $color;
+  border-top: $size solid transparent;
+  border-bottom: $size solid transparent;
+  border-right: 0 solid transparent;
+}
+
+/*
+Positioning - Absolute / Fixed / Relative
+Set position (top, right, bottom, left ) & z-index
+@include absolute($t:50%, $l:0, $z: 9999);
+@include relative;
+--------------------- */
+@mixin absolute ($t: null, $r: null, $b: null, $l: null, $z: null) {
+  top: $t;
+  right: $r;
+  bottom: $b;
+  left: $l;
+  z-index: $z;
+  position: absolute;
+}
+
+@mixin fixed ($t: null, $r: null, $b: null, $l: null, $z: null) {
+  top: $t;
+  right: $r;
+  bottom: $b;
+  left: $l;
+  z-index: $z;
+  position: fixed;
+}
+
+@mixin relative ($t: null, $r: null, $b: null, $l: null, $z: null) {
+  top: $t;
+  right: $r;
+  bottom: $b;
+  left: $l;
+  z-index: $z;
+  position: relative;
+}
+
+/*
+Firefox hack for images with opacity changes
+@include ff-hack;
+--------------------- */
+@mixin ff-hack {
+  background-color: $black;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translateZ(0px);
+}
+
+/*
+Placeholder
+--------------------- */
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content
+  }
+
+  &:-moz-placeholder { /* Firefox 18- */
+    @content
+  }
+
+  &::-moz-placeholder {  /* Firefox 19+ */
+    @content
+  }
+
+  &:-ms-input-placeholder {
+    @content
+  }
+}
+
+/*
+Animation
+--------------------- */
+@mixin animation( $property, $animation-props ){
+  @if $property == animation {
+    -webkit-animation: $animation-props;
+        -moz-animation: $animation-props;
+        -ms-animation: $animation-props;
+        -o-animation: $animation-props;
+        animation: $animation-props;
+  }
+  @else {
+    -webkit-animation-#{$property}: $animation-props;
+    -moz-animation-#{$property}: $animation-props;
+    -ms-animation-#{$property}: $animation-props;
+    -o-animation-#{$property}: $animation-props;
+    animation--#{$property}: $animation-props;
+  }
+
+}
+
+/*
+keyframes
+https://gist.github.com/ericam/1607696
+--------------------- */
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+/*
+Color
+@include color(white, $white);
+--------------------- */
+@mixin color($class, $color) {
+  .#{$class} {
+    color: $color;
+    a {
+      &,&:visited {
+        color: $color;
+      }
+    }
+  }
+}
+
+/*
+Inline Gravity Form
+#gform_wrapper_ID {
+  @include inline-gform;
+}
+--------------------- */
+@mixin inline-gform {
+  &.gform_wrapper {
+    width: 100%;
+  }
+
+  &.gform_wrapper,
+  &.gform_wrapper .gform_body,
+  &.gform_wrapper .gform_footer {
+    float: left;
+  }
+
+  &.gform_wrapper .gform_body {
+    width: 75%;
+  }
+
+  &.gform_wrapper .gform_footer {
+    clear: none;
+    padding: 0;
+  }
+
+  &.gform_wrapper .gform_footer.left_label {
+    margin-left: 0;
+    width: auto;
+  }
+}
+
+/*
+Style Links & Visited in one
+a.link {
+  @include a-link {
+    color: $white;
+    background: $black;
+  }
+}
+--------------------- */
+@mixin a-link {
+  &, &:visited {
+    @content
+  }
+}
+
+/*
+Style All Active Psuedo States
+a.link {
+  @include a-hover {
+    color: $red;
+    background: $white;
+  }
+}
+--------------------- */
+@mixin a-hover {
+  &:hover,
+  &:active,
+  &:focus {
+    @content
+  }
+}
+
+/*
+Style Hover State only on no-touch
+a.link {
+  @include no-touch {
+    color: $red;
+    background: $white;
+  }
+}
+--------------------- */
+@mixin no-touch {
+  html.no-touch &:hover,
+  html.no-touch &:active,
+  html.no-touch &:focus {
+    @content
+  }
+}
+
+

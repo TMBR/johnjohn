@@ -1,0 +1,86 @@
+
+html {
+	overflow-x:hidden;
+	-webkit-font-smoothing:antialiased;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:1.25), only screen and (min-device-pixel-ratio:1.25), only screen and (min-resolution:200dpi), only screen and (min-resolution:1.25dppx) { -webkit-font-smoothing: subpixel-antialiased; }
+
+body {
+	overflow-x: hidden;
+}
+
+.body {
+	@include opacity(0);
+}
+
+a {
+	@include transition($transition);
+	&:hover,
+	&:focus,
+	&:active {
+		text-decoration: none;
+		outline: none;
+	}
+}
+
+:active,
+:focus  {
+	outline: none;
+}
+
+::-moz-selection {
+	background: $black;
+	color: $white;
+}
+
+::selection {
+	background: $black;
+	color: $white;
+}
+
+::-moz-focus-inner {
+	border: 0;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6 {
+	margin-top: 0;
+}
+
+h1,
+.h1 {
+	font-size: $h1; /* 4em */
+	@include respond-to($screen-sm) { font-size: 3.5em; }
+	@include respond-to($screen-xs) { font-size: $h2; }
+}
+
+h2,
+.h2 {
+	font-size: $h2; /* 3em */
+	@include respond-to($screen-sm) { font-size: 2.75em; }
+	@include respond-to($screen-xs) { font-size: $h3; }
+}
+
+h3,
+.h3 {
+	font-size: $h3; /* 2.5em */
+	@include respond-to($screen-sm) { font-size: 2.25em; }
+	@include respond-to($screen-xs) { font-size: $h4; }
+}
+
+h4,
+.h4 {
+	font-size: $h4; /* 2em */
+	@include respond-to($screen-sm) { font-size: 1.75em; }
+	@include respond-to($screen-xs) { font-size: $h5; }
+}
+
+h5,
+.h5 {
+	font-size: $h5; /* 1.5em */
+	@include respond-to($screen-sm) { font-size: 1.25em; }
+	@include respond-to($screen-xs) { font-size: $p; }
+}
+
+
+

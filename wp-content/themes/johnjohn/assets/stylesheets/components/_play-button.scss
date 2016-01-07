@@ -1,0 +1,29 @@
+$gray : #231f20;
+
+.play-button {
+  background: rgba($gray, 0.25);
+  border: none;
+  @include border-radius(50%);
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  @include transition(background .2s);
+  &::after {
+    content: '';
+    @include absolute($t:50%,$l:50%);
+    height: 0;
+    width: 0;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 8px solid $white;
+    @include transform(translate(-30%,-50%));
+  }
+}
+
+.play-button:hover {
+  background: rgba($gray, 0.5);
+}
+

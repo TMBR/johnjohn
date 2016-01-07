@@ -7,7 +7,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-6">
-				<?php get_template_part( 'partials/footer/schema' ); ?>
+				<?php get_template_part( 'xpartials/footer/schema' ); ?>
 			</div><!-- /col -->
 			<div class="col-xs-6"></div>
 			<div class="col-xs-12">

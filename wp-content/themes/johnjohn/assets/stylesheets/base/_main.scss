@@ -8,6 +8,9 @@ html {
 
 body {
 	overflow-x: hidden;
+	font-family: $proxima;
+	font-size: 14px;
+	line-height: 1.5em;
 }
 /*
 .body {
@@ -45,6 +48,8 @@ a {
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6 {
 	margin-top: 0;
+	font-family: $playfair;
+	color: $text-gray;
 }
 
 h1,
@@ -64,6 +69,7 @@ h2,
 h3,
 .h3 {
 	font-size: $h3; /* 2.5em */
+	line-height: 1em;
 	@include respond-to($screen-sm) { font-size: 2.25em; }
 	@include respond-to($screen-xs) { font-size: $h4; }
 }
@@ -82,5 +88,9 @@ h5,
 	@include respond-to($screen-xs) { font-size: $p; }
 }
 
+p {
+	color: $text-gray;
 
+	line-height: 1.5em;
+}
 

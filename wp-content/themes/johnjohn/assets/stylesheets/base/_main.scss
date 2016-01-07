@@ -9,11 +9,11 @@ html {
 body {
 	overflow-x: hidden;
 }
-
+/*
 .body {
 	@include opacity(0);
 }
-
+*/
 a {
 	@include transition($transition);
 	&:hover,

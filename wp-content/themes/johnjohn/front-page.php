@@ -2,15 +2,14 @@
 
 <?php
 // Hero Slider
-get_template_part( 'partials/slider/home-hero' ); ?>
+get_template_part( 'xpartials/slider/home-hero' ); ?>
 
 
 	<div class="container">
 
 		<div class="row">
-		
-				<div class="col-sm-8">
 
+				<div class="col-sm-8">
 					<?php while ( have_posts() ) : the_post(); ?>
 							<?php get_template_part( 'partials/loops/page-loop' ); ?>
 					<?php endwhile; // end of the loop. ?>
@@ -36,7 +35,7 @@ get_template_part( 'partials/slider/home-hero' ); ?>
 
 					<h2>ICON FONT TEST <i class="tmbricons tmbricons-xmas"></i></h2>
 				</div><!-- /col -->
-		
+
 
 
 			<?php get_sidebar(); ?>

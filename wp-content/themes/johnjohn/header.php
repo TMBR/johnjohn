@@ -34,10 +34,10 @@
 
 <body <?php body_class(); ?>>
 
-  <?php get_template_part( 'partials/global/preloader' ); ?>
+  <?php get_template_part( 'xpartials/global/preloader' ); ?>
 
-  <div class="body"> <!-- .body has opacity 0 for fade in effect on load -->
-    
+  <div class="bodyx"> <!-- .body has opacity 0 for fade in effect on load -->
+
     <header id="header" role="header">
       <?php get_template_part( 'partials/header/fixed-nav' ); ?>
     </header>

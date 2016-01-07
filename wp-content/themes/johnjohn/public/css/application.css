@@ -2,6 +2,7 @@
 /* ======== CORE VARIABLES & MIXINS ======== */
 /* ======== RESET ======== */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,700);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -9686,7 +9687,10 @@ html {
   -webkit-font-smoothing: subpixel-antialiased; }
 
 body {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  font-family: "proxima-nova", sans-serif;
+  font-size: 14px;
+  line-height: 1.5em; }
 
 /*
 .body {
@@ -9715,7 +9719,9 @@ a {
   border: 0; }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6 {
-  margin-top: 0; }
+  margin-top: 0;
+  font-family: "Playfair Display", serif;
+  color: #535353; }
 
 h1,
 .h1 {
@@ -9746,7 +9752,8 @@ h2,
 h3,
 .h3 {
   font-size: 2.5em;
-  /* 2.5em */ }
+  /* 2.5em */
+  line-height: 1em; }
   @media all and (max-width: 991px) {
     h3,
     .h3 {
@@ -9781,6 +9788,10 @@ h5,
     h5,
     .h5 {
       font-size: 1em; } }
+
+p {
+  color: #535353;
+  line-height: 1.5em; }
 
 /* GENERAL LAYOUT
 ================================= */
@@ -10004,6 +10015,25 @@ input[type=submit] {
     height: 48px;
     background: url(../../public/images/page-loader.gif) no-repeat center center;
     margin: -24px 0px 0px -24px; }
+
+.content-card {
+  padding-bottom: 30px; }
+  .content-card > .img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px; }
+  .content-card > .heading {
+    margin-bottom: 15px; }
+  .content-card > .content > .text {
+    margin-bottom: 15px; }
+  .content-card > .content > .link {
+    font-weight: 600;
+    color: #535353;
+    border-bottom: 2px solid #535353;
+    padding-bottom: 5px; }
+  .content-card > .content.-indent {
+    margin-left: 25%; }
 
 /* Layout */
 /* NAVIGATION */

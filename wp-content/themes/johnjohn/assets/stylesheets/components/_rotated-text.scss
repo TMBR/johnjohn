@@ -1,0 +1,67 @@
+
+.rotated-text {
+  color: $text-gray;
+  @include absolute($z:1);
+  @include border-radius(0);
+  &::after {
+    content: '';
+    width: 75px;
+    height: 4px;
+    background: $text-gray;
+    margin-top: -2px;
+    @include absolute($t:50%,$z:2);
+  }
+}
+
+.rotated-text > .content {
+  margin: 0;
+  line-height: 40px;
+  padding: 0 20px 0 0;
+}
+
+.rotated-text > .content li {
+  display: inline-block;
+  padding: 0 20px;
+  list-style-type: none;
+  text-transform: uppercase;
+  &:first-child {
+    padding-left: 0;
+  }
+}
+
+.rotated-text a {
+  color: $text-gray;
+}
+
+/* VARIANTS */
+.rotated-text {
+  &.fixed {
+    @include fixed;
+  }
+  &.-left {
+    left: 40px;
+    padding-right: 75px;
+    transform-origin: top left;
+    @include transform(rotate(90deg));
+    &::after {
+      right: 0;
+    }
+  }
+  &.-right {
+    right: 40px;
+    padding-left: 75px;
+    transform-origin: top right;
+    @include transform(rotate(-90deg));
+    &::after {
+      left: 0;
+    }
+    > .content {
+      @include transform(rotate(-180deg));
+    }
+  }
+}
+
+
+
+
+

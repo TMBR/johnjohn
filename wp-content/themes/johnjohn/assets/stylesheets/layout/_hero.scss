@@ -1,0 +1,71 @@
+$height: calc(100vh - 110px);
+
+.page-hero {
+  height: $height;
+
+}
+
+.page-hero .wrapper {
+  width: 100%;
+  height: $height;
+  position: relative;
+}
+
+.things {
+
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  @include transform(translateY(-50%));
+  height: 45%;
+
+  .logo-wrapper {
+    position: absolute;
+    top: 0;
+    left: 50%;
+     @include transform(translateX(-50%));
+  }
+  .play-button {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+     @include transform(translateX(-50%));
+  }
+}
+
+
+
+.video-wrapper .reveal {
+position: relative;
+width: 100%;
+height: $height;
+}
+
+.videocover {
+  background: url(../../public/images/image1.jpg) no-repeat top left;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+}
+
+.video-wrapper .text {
+  left: 66.66666%;
+  font-family: $proxima;
+  font-weight: $fw-semi;
+  font-size: 18px;
+  line-height: 50px;
+  @include spacing(400);
+  text-transform: uppercase;
+  top: -50px;
+}
+
+a.handle {
+  color: #fff;
+  font-weight: $fw-semi;
+  bottom: 0;
+  left: 50%;
+}

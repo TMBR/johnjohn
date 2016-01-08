@@ -1,8 +1,10 @@
 
 </main>
 <!-- #page-main -->
-
-
+</div>
+<div class="logo-wrapper -light">
+   <?php get_template_part( 'partials/components/logo' ); ?>
+   </div>
 <footer id="footer" role="footer">
 	<div class="container">
 		<div class="row">

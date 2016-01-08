@@ -38,19 +38,16 @@
 
   <div class="body"> <!-- .body has opacity 0 for fade in effect on load -->
 
+    <?php get_template_part( 'partials/header/header' ); ?>
 
-    <?php get_template_part( 'partials/global/side-nav' ); ?>
+    <div class="page-wrapper -relative">
 
-    <!-- #header -->
+      <?php get_template_part( 'partials/header/fixed-nav' ); ?>
 
-    <main id="page-main" role="main">
+      <main id="page-main" role="main">
 
-    <div class="wrapper">
-    <div class="container-fluid"><div class="row"><div class="col-sm-12">
-      <?php get_template_part( 'partials/header/logo-dark' ); ?>
+      <?php get_template_part( 'partials/hero' ); ?>
 
-</div></div></div>
-    </div>
 
 
 

@@ -117,15 +117,17 @@
 @import "base/vendor-fix";
 @import "base/main";
 @import "base/layout";
-
+@import "base/helpers";
 /* Components */
 @import "components/buttons";
 @import "components/play-button";
 @import "components/forms";
 @import "components/preloader";
 @import "components/content-card";
+@import "components/rotated-text";
+@import "components/logo";
 /* Layout */
-@import "layout/header";
+
 @import "layout/footer";
 
 /* Templates */

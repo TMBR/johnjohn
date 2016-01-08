@@ -15,7 +15,7 @@
 
 .rotated-text > .content {
   margin: 0;
-  line-height: 40px;
+  line-height: $doc-pad;
   padding: 0 20px 0 0;
 }
 
@@ -35,11 +35,9 @@
 
 /* VARIANTS */
 .rotated-text {
-  &.fixed {
-    @include fixed;
-  }
+
   &.-left {
-    left: 40px;
+    left: $doc-pad;
     padding-right: 75px;
     transform-origin: top left;
     @include transform(rotate(90deg));
@@ -48,7 +46,7 @@
     }
   }
   &.-right {
-    right: 40px;
+    right: $doc-pad;
     padding-left: 75px;
     transform-origin: top right;
     @include transform(rotate(-90deg));
@@ -58,6 +56,15 @@
     > .content {
       @include transform(rotate(-180deg));
     }
+  }
+}
+
+
+.rotated-text > .content {
+  &.-menu {
+    font-size: 12px;
+    font-weight: $fw-semi;
+    @include spacing(75);
   }
 }
 

@@ -1,23 +1,23 @@
 
 /* GENERAL LAYOUT
 ================================= */
-.tac { 
+.tac {
 	text-align: center;
 	}
 
-.tar { 
+.tar {
 	text-align: right;
 	}
 
-.tal { 
+.tal {
 	text-align: left;
 	}
 
-.clear { 
+.clear {
 	clear: both;
 	}
 
-/* INCREASE CONTAINER WIDTH AT 1400 PX + 
+/* INCREASE CONTAINER WIDTH AT 1400 PX +
 =================================== */
 /*
 .container {
@@ -30,17 +30,17 @@
 /* NO MARGIN
 ================================= */
 .b-margin0,
-.tb-margin0 { 
+.tb-margin0 {
 	margin-bottom: 0;
 }
 
 .t-margin0,
-.tb-margin0 { 
+.tb-margin0 {
 	margin-top: 0;
 }
 
 
-/* BOOTSTRAP NO-GUTTER 
+/* BOOTSTRAP NO-GUTTER
 ================================== */
 .nopad {
   padding: 0px !important;
@@ -69,9 +69,11 @@
 	}
 }
 
+.wrapper {
+	position: relative;
+}
 
-
-/* CREATES NEW BOOTSTRAP EXTRA EXTRA SMALL CLASSES 
+/* CREATES NEW BOOTSTRAP EXTRA EXTRA SMALL CLASSES
 ==================================== */
 @media only screen and (max-width: 600px) {
 	 @include make-grid(xxs);
@@ -80,5 +82,7 @@
 /* PUSH BODY DOWN SO NOT BLOCKED BY FIXED HEADER
 ================================================ */
 #page-main {
-	margin-top: 51px; /* height of header */
+	margin-top: 50px; /* height of header */
+	margin-left:50px;
+	margin-right: 50px;
 }

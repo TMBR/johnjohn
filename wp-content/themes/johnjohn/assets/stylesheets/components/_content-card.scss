@@ -11,18 +11,19 @@
   > .heading {
     margin-bottom: $gutter;
   }
-  > .content {
-    > .text {
-      margin-bottom: $gutter;
-    }
-    > .link {
-      font-weight: $fw-semi;
-      color: $text-gray;
-      border-bottom: 2px solid $text-gray;
-      padding-bottom: 5px;
-    }
+}
+
+.content-card .content {
+  > .text {
+    margin-bottom: $gutter;
   }
-  > .content.-indent {
+  > .link {
+    font-weight: $fw-semi;
+    color: $text-gray;
+    border-bottom: 2px solid $text-gray;
+    padding-bottom: 5px;
+  }
+  &.-indent {
     margin-left: 25%;
   }
 }

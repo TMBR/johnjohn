@@ -1,4 +1,4 @@
-<div class="logo-wrapper -absolute">
+<div class="logo-wrapper">
   <h2 class="logo">
     <span class="letter">J</span>
     <span class="letter">o</span>

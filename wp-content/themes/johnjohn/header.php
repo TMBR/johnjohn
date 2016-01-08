@@ -34,13 +34,24 @@
 
 <body <?php body_class(); ?>>
 
-  <?php get_template_part( 'xpartials/global/preloader' ); ?>
+  <?php get_template_part( 'partials/global/preloader' ); ?>
 
-  <div class="bodyx"> <!-- .body has opacity 0 for fade in effect on load -->
+  <div class="body"> <!-- .body has opacity 0 for fade in effect on load -->
 
-    <header id="header" role="header">
-      <?php get_template_part( 'partials/header/fixed-nav' ); ?>
-    </header>
+
+    <?php get_template_part( 'partials/global/side-nav' ); ?>
+
     <!-- #header -->
 
     <main id="page-main" role="main">
+
+    <div class="wrapper">
+    <div class="container-fluid"><div class="row"><div class="col-sm-12">
+      <?php get_template_part( 'partials/header/logo-dark' ); ?>
+
+</div></div></div>
+    </div>
+
+
+
+

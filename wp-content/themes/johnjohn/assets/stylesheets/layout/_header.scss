@@ -1,1 +1,23 @@
+.page-header {
+  padding: 20px 0 20px;
+  margin: 0;
+  border: none;
+}
 
+.page-header .numberwrap {
+  width: $doc-pad;
+}
+
+.page-header .numbers {
+  font-weight: $fw-semi;
+  line-height: 100%;
+  text-align: center;
+  line-height: $gutter;
+  font-size: 12px;
+}
+
+
+.page-header .numbers:last-child {
+  color: #cac9ca;
+  margin-top: 10px;
+}

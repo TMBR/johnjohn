@@ -46,7 +46,7 @@
 
       <main id="page-main" role="main">
 
-      <?php get_template_part( 'partials/hero' ); ?>
+
 
 
 

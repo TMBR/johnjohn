@@ -4,7 +4,7 @@
   width: 75px;
 }
 
-.logo-wrapper > .logo {
+.logo-wrapper .logo {
   font: 800 24px/30px $proxima;
   text-transform: uppercase;
   width: 56px;
@@ -12,14 +12,14 @@
   margin-left: 9.5px;
 }
 
-.logo-wrapper > .logo > .letter {
+.logo-wrapper .logo > .letter {
   display: block;
   float: left;
   text-align: center;
   width: 28px;
 }
 
-.logo-wrapper > .divider {
+.logo-wrapper .divider {
   height: 4px;
   float: left;
   width: 100%;
@@ -29,11 +29,11 @@
 
 
 
-.logo-wrapper > .logo.-flipped {
+.logo-wrapper .logo.-flipped {
   @include transform(rotate(180deg));
 }
 
 
-.logo-wrapper.-light > .logo {
+.logo-wrapper.-light .logo {
   color: $white;
 }

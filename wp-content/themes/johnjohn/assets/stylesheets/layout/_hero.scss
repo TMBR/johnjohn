@@ -50,7 +50,7 @@ width: 100%;
   position: absolute;
   z-index: 2;
   top: 0;
-  @include transition(opacity .5s);
+  @include transition(all .5s);
 }
 
 .page-hero .text {
@@ -63,49 +63,30 @@ width: 100%;
   text-transform: uppercase;
   z-index: 3;
   top: -50px;
+  @include transition(all .75s);
   .line {
     display: block;
   }
 }
 
 .vid-reveal .page-hero .text {
-  animation-name: text-lift;
-  animation-direction: forwards;
-  animation-fill-mode: forwards;
-  animation-duration: .3s ;
-  animation-iteration-count: 1;
-  animation-timing-function: linear;
-}
-@keyframes text-lift {
-  0% {
-    top: -50px;
-    @include opacity(1)
-  }
-  50% {
-    top: -75px;
-    @include opacity(.5);
-  }
-  75% {
-    top: -80px;
-     @include opacity(.2);
-  }
-  100% {
-    top: -120px;
+  top: -120px;
      @include opacity(0);
-  }
+
 }
+
 a.handle {
   color: #fff;
   font-weight: $fw-semi;
   bottom: 30px;
   left: 23%;
   z-index: 3;
-  @include transition(opacity .5s);
+  @include transition(all .5s);
 }
 
 .vid-reveal a.handle,
 .vid-reveal .videocover  {
-  opacity: 0;
+  @include opacity(0);
   visibility: hidden;
 }
 

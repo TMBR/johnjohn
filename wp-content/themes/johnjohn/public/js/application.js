@@ -62,6 +62,7 @@ _throttle = function(func, wait, options) {
 			SiteApp.Throttle();
 			SiteApp.Preloader();
 			SiteApp.Slider();
+			SiteApp.Heroeffect();
 			//SiteApp.Lightbox();
 
 			// Call this to show all animited items
@@ -157,12 +158,10 @@ _throttle = function(func, wait, options) {
 			    animation: "slide",
 			    slideshow: false, // auto play on load
 			    slideshowSpeed: 4000,
-				animationSpeed: 600,
-				pauseOnHover: true,
-				controlNav: true, //Boolean: Create navigation for paging control of each clide? Note: Leave true for manualControls usage
-				directionNav: true, //Boolean: Create navigation for previous/next navigation? (true/false)
-				prevText: "Previous",
-				nextText: "Next"
+					animationSpeed: 600,
+					pauseOnHover: true,
+					controlNav: true, //Boolean: Create navigation for paging control of each clide? Note: Leave true for manualControls usage
+					directionNav: false
 			  });
 
 			});
@@ -178,6 +177,27 @@ _throttle = function(func, wait, options) {
 
 		},
 
+
+		// Hero Animation
+		Heroeffect: function() {
+
+			var play = $('#hero-play');
+			var body = $('body');
+			var herovid = $('#herovid');
+			play.on('click', function(event){
+				event.preventDefault();
+				if(body.hasClass('vid-reveal')) {
+					body.removeClass('vid-reveal').addClass('vid-revealed');
+				} else {
+					body.addClass('vid-reveal');
+					herovid.trigger('click');
+					if(body.hasClass('vid-revealed'))	{
+						body.removeClass('vid-revealed');
+					}
+				}
+			});
+			// https://css-tricks.com/play-button-youtube-and-vimeo-api/
+		},
 
 
 		// Animation Effects

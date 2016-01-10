@@ -15,6 +15,7 @@
 			SiteApp.Throttle();
 			SiteApp.Preloader();
 			SiteApp.Slider();
+			SiteApp.Heroeffect();
 			//SiteApp.Lightbox();
 
 			// Call this to show all animited items
@@ -131,6 +132,27 @@
 
 		},
 
+
+		// Hero Animation
+		Heroeffect: function() {
+
+			var play = $('#hero-play');
+			var body = $('body');
+			var herovid = $('#herovid');
+			play.on('click', function(event){
+				event.preventDefault();
+				if(body.hasClass('vid-reveal')) {
+					body.removeClass('vid-reveal').addClass('vid-revealed');
+				} else {
+					body.addClass('vid-reveal');
+					herovid.trigger('click');
+					if(body.hasClass('vid-revealed'))	{
+						body.removeClass('vid-revealed');
+					}
+				}
+			});
+			// https://css-tricks.com/play-button-youtube-and-vimeo-api/
+		},
 
 
 		// Animation Effects

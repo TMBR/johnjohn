@@ -10087,16 +10087,8 @@ input[type=submit] {
   position: absolute;
   border-radius: 0;
   background-clip: padding-box;
-  /* stops bg color from leaking outside the border: */ }
-  .rotated-text::after {
-    content: '';
-    width: 75px;
-    height: 4px;
-    background: #535353;
-    margin-top: -2px;
-    top: 50%;
-    z-index: 2;
-    position: absolute; }
+  /* stops bg color from leaking outside the border: */
+  padding-right: 75px; }
 
 .rotated-text > .content {
   margin: 0;
@@ -10114,6 +10106,15 @@ input[type=submit] {
 .rotated-text a {
   color: #535353; }
 
+.rotated-text > .rule {
+  width: 75px;
+  height: 4px;
+  background: #535353;
+  margin-top: -2px;
+  top: 50%;
+  z-index: 2;
+  position: absolute; }
+
 /* VARIANTS */
 .rotated-text.-left {
   left: 50px;
@@ -10122,7 +10123,7 @@ input[type=submit] {
   transform-origin: top left;
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg); }
-  .rotated-text.-left::after {
+  .rotated-text.-left > .rule {
     right: 0; }
 
 .rotated-text.-right {
@@ -10132,7 +10133,7 @@ input[type=submit] {
   transform-origin: top right;
   -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg); }
-  .rotated-text.-right::after {
+  .rotated-text.-right > .rule {
     left: 0; }
   .rotated-text.-right > .content {
     -webkit-transform: rotate(-180deg);

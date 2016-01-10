@@ -27,3 +27,19 @@
     margin-left: 25%;
   }
 }
+
+.content-card {
+
+  &.-noimg > .heading {
+    margin-top: $gutter*2;
+  }
+  &.-overlap {
+    margin-top: -50%;
+    position: relative;
+    z-index: 9;
+  }
+  &.-overlap > .img {
+    margin-right: 5%;
+    width: 95%;
+  }
+}

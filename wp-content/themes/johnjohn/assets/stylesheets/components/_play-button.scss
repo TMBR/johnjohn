@@ -10,8 +10,11 @@ $gray : #231f20;
   position: relative;
   margin: 0;
   padding: 0;
+  box-sizing: content-box;
   @include transition(background .2s);
-  &::after {
+
+  &::after,
+  &::before {
     content: '';
     @include absolute($t:50%,$l:50%);
     height: 0;
@@ -21,9 +24,90 @@ $gray : #231f20;
     border-left: 8px solid $white;
     @include transform(translate(-30%,-50%));
   }
+  &::before {
+    @include opacity(0);
+    visibility: hidden;
+  }
 }
 
 .play-button:hover {
   background: rgba($gray, 0.5);
 }
+
+.play-button.-animated {
+  @include transition-transform(.5s ease-out, background .2s);
+  &::before,
+  &::after {
+    @include transition(all 1s);
+  }
+}
+
+.vid-reveal .play-button.-animated {
+  @include transform(rotate(360deg));
+  background: darken($gray,5%);
+}
+
+.vid-reveal .play-button.-animated::after,
+.vid-reveal .play-button.-animated::before {
+    height: 15px;
+    width: 2px;
+    background: $white;
+    @include opacity(1);
+    visibility: visible;
+    border-top: medium none;
+    border-bottom: none;
+    border-left: none;
+}
+.vid-reveal .play-button.-animated::after {
+  @include transform(translate(-50%, -50%) rotate(45deg));
+}
+.vid-reveal .play-button.-animated::before {
+  @include transform(translate(-50%, -50%) rotate(-45deg));
+}
+
+
+
+/*
+.vid-revealed .play-button.-animated,
+.vid-revealed .play-button.-animated::after,
+.vid-revealed .play-button.-animated::before,
+.vid-reveal .play-button.-animated,
+.vid-reveal .play-button.-animated::after,
+.vid-reveal .play-button.-animated::before {
+
+  animation-duration: 1s ;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+.vid-reveal .play-button.-animated,
+.vid-reveal .play-button.-animated::after,
+.vid-reveal .play-button.-animated::before {
+  animation-direction: forwards;
+  animation-fill-mode: forwards;
+}
+
+.vid-revealed .play-button.-animated,
+.vid-revealed .play-button.-animated::after,
+.vid-revealed .play-button.-animated::before {
+  animation-direction: backwards;
+  animation-fill-mode: backwards;
+}
+
+.vid-revealed .play-button.-animated,
+.vid-reveal .play-button.-animated {
+  animation-name: btn-animate;
+}
+
+.vid-revealed .play-button.-animated::after,
+.vid-reveal .play-button.-animated::after {
+  animation-name: icon-change-after;
+}
+
+.vid-revealed .play-button.-animated::before,
+.vid-reveal .play-button.-animated::before {
+  animation-name: icon-change-before;
+}
+*/
+
 

@@ -37,6 +37,10 @@
     margin-top: -50%;
     position: relative;
     z-index: 9;
+    @include transition(margin .3s);
+    .vid-reveal & {
+       margin-top: 20px;
+    }
   }
   &.-overlap > .img {
     margin-right: 5%;

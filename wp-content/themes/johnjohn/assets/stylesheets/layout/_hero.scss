@@ -16,6 +16,7 @@
   top: 50%;
   @include transform(translateY(-50%));
   height: 45%;
+  min-height: 235px;
 
   .logo-wrapper {
     position: absolute;
@@ -27,7 +28,7 @@
     position: absolute;
     bottom: 0;
     left: 50%;
-     @include transform(translateX(-50%));
+    margin-left: -25px;
   }
 }
 
@@ -49,6 +50,7 @@ width: 100%;
   position: absolute;
   z-index: 2;
   top: 0;
+  @include transition(opacity .5s);
 }
 
 .page-hero .text {
@@ -66,10 +68,47 @@ width: 100%;
   }
 }
 
+.vid-reveal .page-hero .text {
+  animation-name: text-lift;
+  animation-direction: forwards;
+  animation-fill-mode: forwards;
+  animation-duration: .3s ;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+@keyframes text-lift {
+  0% {
+    top: -50px;
+    @include opacity(1)
+  }
+  50% {
+    top: -75px;
+    @include opacity(.5);
+  }
+  75% {
+    top: -80px;
+     @include opacity(.2);
+  }
+  100% {
+    top: -120px;
+     @include opacity(0);
+  }
+}
 a.handle {
   color: #fff;
   font-weight: $fw-semi;
   bottom: 30px;
   left: 23%;
   z-index: 3;
+  @include transition(opacity .5s);
 }
+
+.vid-reveal a.handle,
+.vid-reveal .videocover  {
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+
+

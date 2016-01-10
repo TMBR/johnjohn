@@ -1,0 +1,81 @@
+@keyframes btn-animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(180deg);
+    box-shadow: 0 0 3px 3px rgba($gray, 0.25);
+  }
+  30% {
+/*    background: aqua;*/
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  70% {
+  /*  background: yellow;*/
+  }
+  80% {
+    transform: rotate(540deg);
+    box-shadow: 0 0 3px 5px $gray;
+  }
+  90% {
+  /*  background: turquoise;*/
+  }
+  100% {
+    transform: rotate(720deg);
+    background: $gray;
+  }
+}
+
+@keyframes icon-change-before {
+
+  50% {
+    height: 0;
+    width: 0;
+  }
+  75% {
+    @include opacity(1)
+  visibility: visible;
+    height: 5px;
+    width: 1px;
+    background: rgba($white,0.7);
+    @include transform(translate(-50%, -50%) rotate(-45deg));
+  }
+
+  100% {
+    @include opacity(1)
+  visibility: visible;
+    height: 15px;
+    width: 2px;
+    background: $white;
+    @include transform(translate(-50%, -50%) rotate(-45deg));
+
+  }
+}
+
+
+@keyframes icon-change-after {
+
+  50% {
+    border-top: medium none;
+    border-bottom: none;
+    border-left: none;
+  }
+  75% {
+    height: 5px;
+    width: 1px;
+    background: rgba($white,0.7);
+    @include transform(translate(-50%, -50%) rotate(45deg));
+  }
+
+  100% {
+    height: 15px;
+    width: 2px;
+    background: $white;
+     @include transform(translate(-50%, -50%) rotate(45deg));
+     border-top: medium none;
+    border-bottom: none;
+    border-left: none;
+  }
+}

@@ -3,14 +3,7 @@
   color: $text-gray;
   @include absolute($z:1);
   @include border-radius(0);
-  &::after {
-    content: '';
-    width: 75px;
-    height: 4px;
-    background: $text-gray;
-    margin-top: -2px;
-    @include absolute($t:50%,$z:2);
-  }
+  padding-right: 75px;
 }
 
 .rotated-text > .content {
@@ -33,6 +26,14 @@
   color: $text-gray;
 }
 
+.rotated-text > .rule {
+  width: 75px;
+  height: 4px;
+  background: $text-gray;
+  margin-top: -2px;
+  @include absolute($t:50%,$z:2);
+}
+
 /* VARIANTS */
 .rotated-text {
 
@@ -41,7 +42,7 @@
     padding-right: 75px;
     transform-origin: top left;
     @include transform(rotate(90deg));
-    &::after {
+    > .rule {
       right: 0;
     }
   }
@@ -50,7 +51,7 @@
     padding-left: 75px;
     transform-origin: top right;
     @include transform(rotate(-90deg));
-    &::after {
+    > .rule {
       left: 0;
     }
     > .content {

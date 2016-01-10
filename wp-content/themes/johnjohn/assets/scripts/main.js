@@ -106,7 +106,7 @@
 
 			$(document).ready(function() {
 
-			  $('#home-slider').flexslider({
+			  $('#vid-gallery').flexslider({
 			    animation: "slide",
 			    slideshow: false, // auto play on load
 			    slideshowSpeed: 4000,

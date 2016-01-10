@@ -35,10 +35,10 @@ $gray : #231f20;
 }
 
 .play-button.-animated {
-  @include transition-transform(.5s ease-out, background .2s);
+  @include transition-transform(.75s ease-out, background .2s);
   &::before,
   &::after {
-    @include transition(all 1s);
+    @include transition(all .75s);
   }
 }
 

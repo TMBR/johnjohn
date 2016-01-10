@@ -37,7 +37,7 @@
     margin-top: -50%;
     position: relative;
     z-index: 9;
-    @include transition(margin .3s);
+    @include transition(margin .75s);
     .vid-reveal & {
        margin-top: 20px;
     }

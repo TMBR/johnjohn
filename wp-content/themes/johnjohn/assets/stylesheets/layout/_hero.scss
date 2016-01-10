@@ -1,17 +1,15 @@
-$height: calc(100vh - 110px);
+
+
+.-heroheight {
+  height: calc(100vh - 110px);
+}
 
 .page-hero {
-  height: $height;
-
+  @extend .-heroheight;
 }
 
-.page-hero .wrapper {
-  width: 100%;
-  height: $height;
-  position: relative;
-}
 
-.things {
+.page-hero .leftwrap {
 
   position: absolute;
   width: 100%;
@@ -35,10 +33,10 @@ $height: calc(100vh - 110px);
 
 
 
-.video-wrapper .reveal {
+.page-hero .reveal {
 position: relative;
 width: 100%;
-height: $height;
+@extend .-heroheight;
 }
 
 .videocover {
@@ -46,13 +44,14 @@ height: $height;
   background-size: cover;
   height: 100%;
   width: 100%;
-  opacity: 0;
-  visibility: hidden;
+  /*opacity: 0;*/
+  /*visibility: hidden;*/
   position: absolute;
+  z-index: 2;
   top: 0;
 }
 
-.video-wrapper .text {
+.page-hero .text {
   left: 66.66666%;
   font-family: $proxima;
   font-weight: $fw-semi;
@@ -60,12 +59,17 @@ height: $height;
   line-height: 50px;
   @include spacing(400);
   text-transform: uppercase;
+  z-index: 3;
   top: -50px;
+  .line {
+    display: block;
+  }
 }
 
 a.handle {
   color: #fff;
   font-weight: $fw-semi;
-  bottom: 0;
-  left: 50%;
+  bottom: 30px;
+  left: 23%;
+  z-index: 3;
 }

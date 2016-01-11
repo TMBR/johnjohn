@@ -95,6 +95,13 @@ p {
 	line-height: 1.5em;
 }
 
+blockquote {
+	margin: $gutter*5 0 $gutter*6;
+	p {
+		font-family: $playfair;
+		font-size: 2.25em;
+	}
+}
 
 .-relative {
 	position: relative;
@@ -108,8 +115,24 @@ p {
 	position: fixed;
 }
 
+.-white {
+	color: $white;
+}
+
+.broken-text {
+	font-family: $proxima;
+  font-weight: $fw-semi;
+  font-size: 18px;
+  line-height: 50px;
+  @include spacing(400);
+  text-transform: uppercase;
+  .line {
+  	display: block;
+  }
+}
+
 #page-main {
-	background: #eee;
+
 	margin-top: 30px; /* height of header */
 	margin-left: 50px;
 	margin-right: 0;

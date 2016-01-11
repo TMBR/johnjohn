@@ -1,0 +1,14 @@
+.vert-caption {
+  position: relative;
+
+}
+
+.vert-caption .caption {
+  position: absolute;
+  transform-origin: top left;
+    @include transform(rotate(90deg));
+
+    line-height: 40px;
+    left: 40px;
+    top: $gutter*2;
+}

@@ -28,6 +28,10 @@
   }
 }
 
+.content-card > .content:first-child > .text:first-child {
+  margin-top: $gutter*4;
+}
+
 .content-card {
 
   &.-noimg > .heading {

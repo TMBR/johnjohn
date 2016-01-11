@@ -9792,6 +9792,12 @@ p {
   color: #535353;
   line-height: 1.5em; }
 
+blockquote {
+  margin: 75px 0 90px; }
+  blockquote p {
+    font-family: "Playfair Display", serif;
+    font-size: 2.25em; }
+
 .-relative {
   position: relative; }
 
@@ -9801,8 +9807,20 @@ p {
 .-fixed {
   position: fixed; }
 
+.-white {
+  color: #FFF; }
+
+.broken-text {
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 50px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase; }
+  .broken-text .line {
+    display: block; }
+
 #page-main {
-  background: #eee;
   margin-top: 30px;
   /* height of header */
   margin-left: 50px;
@@ -10148,6 +10166,9 @@ input[type=submit] {
 .content-card .content.-indent {
   margin-left: 25%; }
 
+.content-card > .content:first-child > .text:first-child {
+  margin-top: 60px; }
+
 .content-card.-noimg > .heading {
   margin-top: 30px; }
 
@@ -10349,6 +10370,30 @@ input[type=submit] {
       display: block;
       margin: 4px 0; }
 
+.vert-caption {
+  position: relative; }
+
+.vert-caption .caption {
+  position: absolute;
+  -webkit-transform-origin: top left;
+  transform-origin: top left;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  line-height: 40px;
+  left: 40px;
+  top: 30px; }
+
+.highlight.-surf {
+  background: url("../../public/images/surfboard.jpg") no-repeat top left;
+  margin-right: -15px;
+  margin-left: 50px;
+  height: 300px; }
+  .highlight.-surf .broken-text {
+    padding-top: 95px; }
+  .highlight.-surf img {
+    margin-left: 25%;
+    margin-top: -40px; }
+
 /* Layout */
 .page-header {
   padding: 20px 0 20px;
@@ -10408,21 +10453,13 @@ input[type=submit] {
   top: 0;
   transition: all 0.5s; }
 
-.page-hero .text {
+.page-hero .broken-text {
   left: 66.66666%;
-  font-family: "proxima-nova", sans-serif;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 50px;
-  letter-spacing: 0.4em;
-  text-transform: uppercase;
   z-index: 3;
   top: -50px;
   transition: all 0.75s; }
-  .page-hero .text .line {
-    display: block; }
 
-.vid-reveal .page-hero .text {
+.vid-reveal .page-hero .broken-text {
   top: -120px;
   opacity: 0;
   filter: alpha(opacity=0); }

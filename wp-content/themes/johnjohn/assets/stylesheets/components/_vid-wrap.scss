@@ -1,0 +1,29 @@
+
+.vid-wrap {
+  display: block;
+  overflow: hidden;
+  @include relative
+}
+
+.vid-wrap .play-button {
+  @include absolute;
+}
+
+.vid-wrap img {
+  @include transition-transform(1s ease-in);
+}
+
+.vid-wrap:hover {
+  .play-button {
+    background: rgba($dark-gray, 0.7);
+  }
+  img {
+    @include transform(scale(1.1));
+  }
+}
+
+.vid-wrap.-center .play-button {
+  @include absolute($t:50%,$l:50%,$z:1);
+  @include transform(translate(-50%,-50%));
+}
+

@@ -53,23 +53,16 @@ width: 100%;
   @include transition(all .5s);
 }
 
-.page-hero .text {
+.page-hero .broken-text {
   left: 66.66666%;
-  font-family: $proxima;
-  font-weight: $fw-semi;
-  font-size: 18px;
-  line-height: 50px;
-  @include spacing(400);
-  text-transform: uppercase;
+
   z-index: 3;
   top: -50px;
   @include transition(all .75s);
-  .line {
-    display: block;
-  }
+
 }
 
-.vid-reveal .page-hero .text {
+.vid-reveal .page-hero .broken-text {
   top: -120px;
      @include opacity(0);
 

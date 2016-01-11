@@ -17,7 +17,7 @@
 
       <div class="col-sm-9 _unpad-l">
 
-        <h1 class="text -absolute">
+        <h1 class="broken-text -absolute">
           <span class="line animation" data-animation="animation-fade-in-left">I am</span>
           <span class="line animation" data-animation="animation-fade-in-left" data-delay="300">John John</span>
           <span class="line animation" data-animation="animation-fade-in-left" data-delay="600">Florence</span>

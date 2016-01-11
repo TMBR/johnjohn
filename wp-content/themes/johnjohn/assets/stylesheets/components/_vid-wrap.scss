@@ -10,7 +10,7 @@
 }
 
 .vid-wrap img {
-  @include transition-transform(1s ease-in);
+  @include transition-transform(.5s ease-in, opacity .5s ease-in);
 }
 
 .vid-wrap:hover {
@@ -25,5 +25,34 @@
 .vid-wrap.-center .play-button {
   @include absolute($t:50%,$l:50%,$z:1);
   @include transform(translate(-50%,-50%));
+
+}
+
+.vid-wrap.-special .play-button {
+  @include absolute($t:44%,$l:30.5%,$z:1);
+  @include transition(all .5s ease-in);
+}
+.vid-wrap .surfer {
+  background: url('../../public/images/surfer-dude.png') no-repeat top left;
+  width: 150px;
+  height: 100px;
+  background-size: contain;
+  position: absolute;
+  left: 55%;
+  top: 30%;
+  z-index: 1;
+  @include transition-transform(.75s ease-out);
+}
+.vid-wrap.-special:hover {
+  .play-button {
+    /*left: 29%;*/
+  }
+  img {
+    @include transform(scale(1));
+    @include opacity(0.8);
+  }
+}
+.vid-wrap:hover .surfer {
+  @include transform(translate(10px, 10px) rotate(2deg));
 }
 

@@ -3,7 +3,7 @@
   color: $text-gray;
   @include absolute($z:1);
   @include border-radius(0);
-  padding-right: 75px;
+
 }
 
 .rotated-text > .content {
@@ -59,7 +59,12 @@
     > .content {
       @include transform(rotate(-180deg));
     }
+    &.-center {
+      top: 50%;
+      @include transform(rotate(-90deg) translateX(50%));
+    }
   }
+
 }
 
 

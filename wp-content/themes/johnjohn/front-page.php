@@ -6,6 +6,6 @@
 
 <?php get_template_part( 'partials/s3' ); ?>
 
-
+<?php get_template_part( 'partials/s4' ); ?>
 
 <?php get_footer();

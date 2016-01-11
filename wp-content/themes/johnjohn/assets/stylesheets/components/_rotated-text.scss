@@ -36,7 +36,9 @@
 
 /* VARIANTS */
 .rotated-text {
-
+  &.-fixed {
+    @include fixed;
+  }
   &.-left {
     left: $doc-pad;
     padding-right: 75px;

@@ -13,20 +13,8 @@
       </div>
 
       <div class="col-sm-5">
-      <div id="vid-gallery" class="video-gallery flexslider">
-        <ul class="slides">
+      <?php get_template_part( 'partials/vid-gallery' ); ?>
 
-                <li>
-                    <img src="<?php echo get_template_directory_uri(); ?>/public/images/image2.jpg" alt="" class="img-responsive" />
-
-                </li>
-                <li>
-                    <img src="<?php echo get_template_directory_uri(); ?>/public/images/image3.jpg" alt="" class="img-responsive" />
-
-                </li>
-
-        </ul>
-    </div>
 
         <div class="content-card -noimg">
 

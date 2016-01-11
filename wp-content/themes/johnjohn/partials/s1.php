@@ -7,7 +7,7 @@
         <div class="leftwrap">
 
           <div class="logo-wrapper">
-            <?php get_template_part( 'partials/components/logo' ); ?>
+            <?php get_template_part( 'partials/global/logo' ); ?>
           </div><!-- .logo-wrapper -->
 
           <a href="" class="play-button -animated" id="hero-play"></a>

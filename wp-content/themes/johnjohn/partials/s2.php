@@ -5,11 +5,11 @@
       </div>
 
       <div class="col-sm-2">
-        <?php get_template_part( 'partials/intro' ); ?>
+        <?php get_template_part( 'partials/s2/intro' ); ?>
       </div>
 
       <div class="col-sm-5">
-        <?php get_template_part( 'partials/vid-gallery' ); ?>
+        <?php get_template_part( 'partials/s2/vid-gallery' ); ?>
         <div class="content-card -noimg">
           <h3 class="heading">Billibong Pro Tahiti<br/> Faceoff</h3>
           <div class="content">

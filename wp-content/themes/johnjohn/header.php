@@ -42,7 +42,7 @@
 
     <div class="page-wrapper -relative">
 
-      <?php get_template_part( 'partials/header/fixed-nav' ); ?>
+      <?php get_template_part( 'partials/header/nav' ); ?>
 
       <main id="page-main" role="main">
 

@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<?php get_template_part( 'partials/hero' ); ?>
+<?php get_template_part( 'partials/s1' ); ?>
 
 <?php get_template_part( 'partials/s2' ); ?>
 

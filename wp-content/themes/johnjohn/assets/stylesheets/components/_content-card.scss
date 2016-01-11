@@ -22,14 +22,9 @@
     border-bottom: 2px solid $text-gray;
     padding-bottom: 5px;
   }
-  &.-indent {
-    margin-left: 25%;
-  }
+
 }
 
-.content-card > .content:first-child > .text:first-child {
-  margin-top: $gutter*4;
-}
 
 .content-card {
 

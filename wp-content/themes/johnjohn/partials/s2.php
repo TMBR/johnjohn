@@ -1,8 +1,4 @@
-<?php get_header(); ?>
-
-<?php get_template_part( 'partials/hero' ); ?>
-
-  <div class="container-fluid">
+<div class="container-fluid">
     <div class="row">
       <div class="col-sm-3">
         <img src="<?php echo get_template_directory_uri(); ?>/public/images/placeholder.jpg" style="margin-top: 200px;" class="img-responsive" alt="" />
@@ -22,29 +18,5 @@
           </div>
         </div>
       </div>
+    </div>
   </div>
-  </div>
-
-	<div class="container">
-
-		<div class="row">
-
-				<div class="col-sm-12">
-<div style="background: gray; height: 1000px; width: 100%; margin-top: 200px;">
-
-
-
-
-</div>
-
-				</div><!-- /col -->
-
-
-
-			<?php get_sidebar(); ?>
-
-		</div><!-- /row -->
-	</div><!-- /container -->
-
-
-<?php get_footer();

@@ -1,6 +1,7 @@
 
 
 .content-card {
+  background: magenta;
   padding-bottom: $gutter*2;
   > .img {
     max-width: 100%;
@@ -11,9 +12,7 @@
   > .heading {
     margin-bottom: $gutter;
   }
-}
 
-.content-card .content {
   > .text {
     margin-bottom: $gutter;
   }

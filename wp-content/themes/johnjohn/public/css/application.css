@@ -10169,8 +10169,7 @@ input[type=submit] {
   position: absolute;
   border-radius: 0;
   background-clip: padding-box;
-  /* stops bg color from leaking outside the border: */
-  padding-right: 75px; }
+  /* stops bg color from leaking outside the border: */ }
 
 .rotated-text > .content {
   margin: 0;
@@ -10223,6 +10222,10 @@ input[type=submit] {
   .rotated-text.-right > .content {
     -webkit-transform: rotate(-180deg);
     transform: rotate(-180deg); }
+  .rotated-text.-right.-center {
+    top: 50%;
+    -webkit-transform: rotate(-90deg) translateX(50%);
+    transform: rotate(-90deg) translateX(50%); }
 
 .rotated-text > .content.-menu {
   font-size: 12px;
@@ -10268,9 +10271,9 @@ input[type=submit] {
   position: absolute; }
 
 .vid-wrap img {
-  transition: -webkit-transform 1s ease-in;
-  transition: transform 1s ease-in;
-  transition: transform 1s ease-in, -webkit-transform 1s ease-in; }
+  transition: opacity 0.5s ease-in, -webkit-transform 0.5s ease-in;
+  transition: transform 0.5s ease-in, opacity 0.5s ease-in;
+  transition: transform 0.5s ease-in, opacity 0.5s ease-in, -webkit-transform 0.5s ease-in; }
 
 .vid-wrap:hover .play-button {
   background: rgba(35, 31, 32, 0.7); }
@@ -10286,6 +10289,39 @@ input[type=submit] {
   position: absolute;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
+
+.vid-wrap.-special .play-button {
+  top: 44%;
+  left: 30.5%;
+  z-index: 1;
+  position: absolute;
+  transition: all 0.5s ease-in; }
+
+.vid-wrap .surfer {
+  background: url("../../public/images/surfer-dude.png") no-repeat top left;
+  width: 150px;
+  height: 100px;
+  background-size: contain;
+  position: absolute;
+  left: 55%;
+  top: 30%;
+  z-index: 1;
+  transition: -webkit-transform 0.75s ease-out;
+  transition: transform 0.75s ease-out;
+  transition: transform 0.75s ease-out, -webkit-transform 0.75s ease-out; }
+
+.vid-wrap.-special:hover .play-button {
+  /*left: 29%;*/ }
+
+.vid-wrap.-special:hover img {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  opacity: 0.8;
+  filter: alpha(opacity=80); }
+
+.vid-wrap:hover .surfer {
+  -webkit-transform: translate(10px, 10px) rotate(2deg);
+  transform: translate(10px, 10px) rotate(2deg); }
 
 .flex-control-nav.flex-control-paging li {
   margin: 0 4px;
@@ -10395,7 +10431,7 @@ a.handle {
   color: #fff;
   font-weight: 600;
   bottom: 30px;
-  left: 23%;
+  left: 33%;
   z-index: 3;
   transition: all 0.5s; }
 
@@ -10407,5 +10443,9 @@ a.handle {
 
 .video-gallery {
   margin-top: 75px; }
+
+.large-video {
+  margin-top: 75px;
+  height: 715px; }
 
 /* Templates */

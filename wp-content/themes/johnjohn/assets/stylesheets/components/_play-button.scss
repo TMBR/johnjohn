@@ -1,7 +1,7 @@
-$gray : #231f20;
+
 
 .play-button {
-  background: rgba($gray, 0.25);
+  background: rgba($dark-gray, 0.4);
   border: none;
   @include border-radius(50%);
   display: inline-block;
@@ -31,7 +31,7 @@ $gray : #231f20;
 }
 
 .play-button:hover {
-  background: rgba($gray, 0.5);
+  background: rgba($dark-gray, 0.7);
 }
 
 .play-button.-animated {
@@ -44,7 +44,7 @@ $gray : #231f20;
 
 .vid-reveal .play-button.-animated {
   @include transform(rotate(360deg));
-  background: darken($gray,5%);
+  background: darken($dark-gray,5%);
 }
 
 .vid-reveal .play-button.-animated::after,

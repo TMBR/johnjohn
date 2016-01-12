@@ -10566,4 +10566,88 @@ a.handle {
 .card-gallery .broken-text {
   margin-left: 30px; }
 
+.site-footer {
+  position: relative;
+  margin: 15px;
+  text-align: center; }
+
+.site-footer .footer-content {
+  top: 250px;
+  left: 50%;
+  z-index: 999;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%); }
+
+.site-footer .footer-logo {
+  width: 100%;
+  float: left;
+  position: relative;
+  height: 150px;
+  margin-bottom: 30px; }
+
+.site-footer .logo-wrapper {
+  float: left;
+  width: 75px;
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%); }
+
+.site-footer .text {
+  color: #aeacad;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  position: relative; }
+  .site-footer .text::after {
+    content: '';
+    height: 3px;
+    width: 50px;
+    background: #535353;
+    bottom: 0;
+    left: 50%;
+    position: absolute;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%); }
+
+.site-footer .link {
+  color: #FFF; }
+
+.site-footer .top-wrap {
+  position: relative;
+  display: block;
+  height: 30px;
+  margin: 30px 0 0; }
+  .site-footer .top-wrap .top {
+    left: 50%;
+    display: block;
+    height: 100%;
+    margin-left: -1px; }
+    .site-footer .top-wrap .top, .site-footer .top-wrap .top::before, .site-footer .top-wrap .top::after {
+      top: 0;
+      position: absolute;
+      width: 2px;
+      border-radius: 1px;
+      background-clip: padding-box;
+      /* stops bg color from leaking outside the border: */
+      background: #535353;
+      transition: all 0.2s ease-in; }
+    .site-footer .top-wrap .top::before, .site-footer .top-wrap .top::after {
+      content: '';
+      height: 75%; }
+    .site-footer .top-wrap .top::before {
+      -webkit-transform-origin: top right;
+      transform-origin: top right;
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      left: 0; }
+    .site-footer .top-wrap .top::after {
+      -webkit-transform-origin: top left;
+      transform-origin: top left;
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      right: 0; }
+  .site-footer .top-wrap:hover .top, .site-footer .top-wrap:hover .top::before, .site-footer .top-wrap:hover .top::after {
+    background: #FFF; }
+
 /* Templates */

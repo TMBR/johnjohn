@@ -1,11 +1,21 @@
-<?php get_header(); ?>
+<?php
 
-<?php get_template_part( 'partials/s1' ); ?>
+get_header();
 
-<?php get_template_part( 'partials/s2' ); ?>
 
-<?php get_template_part( 'partials/s3' ); ?>
 
-<?php get_template_part( 'partials/s4' ); ?>
 
-<?php get_footer();
+get_template_part( 'partials/s1' );
+
+get_template_part( 'partials/s2' );
+
+get_template_part( 'partials/s3' );
+
+get_template_part( 'partials/s4' );
+
+get_template_part( 'partials/s5' );
+
+
+
+
+get_footer();

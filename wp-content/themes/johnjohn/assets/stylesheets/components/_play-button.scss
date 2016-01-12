@@ -35,7 +35,12 @@
 }
 
 .play-button.-animated {
+  opacity: 0;
   @include transition-transform(.75s ease-out, background .2s);
+  .ready & {
+    animation: ready-fade-in 2s 1s forwards;
+  }
+
   &::before,
   &::after {
     @include transition(all .75s);

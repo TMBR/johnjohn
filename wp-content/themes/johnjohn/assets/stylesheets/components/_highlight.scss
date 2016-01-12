@@ -1,8 +1,10 @@
-.highlight.-surf {
-  background: url('../../public/images/surfboard.jpg') no-repeat top left;
-  margin-right: -15px;
+.highlight {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: top left;
+
   margin-left: 50px;
-  height: 300px;
+
   .broken-text {
       padding-top: 95px;
 

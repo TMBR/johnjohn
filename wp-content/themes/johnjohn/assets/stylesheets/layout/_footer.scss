@@ -1,0 +1,88 @@
+.site-footer {
+  @include relative
+  margin: $gutter;
+  text-align: center;
+}
+.site-footer .footer-content {
+  @include absolute($t:250px,$l:50%,$z:999);
+  @include transform(translateX(-50%));
+}
+
+.site-footer .footer-logo {
+  width: 100%;
+  float: left;
+  @include relative;
+  height: 150px;
+  margin-bottom: $gutter*2;
+}
+
+.site-footer  .logo-wrapper {
+  float: left;
+  width: 75px;
+  @include absolute($l:50%);
+  @include transform(translateX(-50%));
+}
+
+.site-footer .text {
+  color: $light-gray;
+  padding-bottom: $gutter*2;
+  margin-bottom: $gutter*2;
+  position: relative;
+  &::after {
+    content: '';
+    height: 3px;
+    width: 50px;
+    background: $text-gray;
+    @include absolute($b:0,$l:50%);
+    @include transform(translateX(-50%));
+  }
+}
+
+.site-footer .link {
+  color: $white;
+}
+
+.site-footer .top-wrap {
+  @include relative;
+  display: block;
+  height: 30px;
+  margin: 30px 0 0;
+  .top {
+    left: 50%;
+    display: block;
+    height: 100%;
+    margin-left: -1px;
+    &,
+    &::before,
+    &::after {
+      @include absolute($t:0);
+      width: 2px;
+      @include border-radius(1px);
+      background: $text-gray;
+      @include transition(all .2s ease-in);
+    }
+    &::before,
+    &::after {
+      content: '';
+      height: 75%;
+    }
+    &::before {
+      transform-origin: top right;
+      @include transform(rotate(45deg));
+      left: 0;
+    }
+    &::after {
+      transform-origin: top left;
+      @include transform(rotate(-45deg));
+      right: 0;
+    }
+  }
+  &:hover .top {
+    &,
+    &::before,
+    &::after {
+      background: $white;
+    }
+  }
+}
+

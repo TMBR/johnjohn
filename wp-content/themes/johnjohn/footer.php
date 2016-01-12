@@ -2,24 +2,25 @@
 </main>
 <!-- #page-main -->
 </div>
-<div class="logo-wrapper -light">
-   <?php get_template_part( 'partials/components/logo' ); ?>
-   </div>
-<footer id="footer" role="footer">
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-6">
-				<?php get_template_part( 'xpartials/footer/schema' ); ?>
-			</div><!-- /col -->
-			<div class="col-xs-6"></div>
-			<div class="col-xs-12">
-				<p class="text-center copyright"><small><?php echo sprintf( __( '%1$s %2$s %3$s.'), 'Copyright &copy;', date('Y'), esc_html(get_bloginfo('name')) );  ?> All Rights Reserved. Site By
-				<span class="sep"> | </span>
-				<a href="http://wearetmbr.com/" rel="designer">TMBR</a></small></p>
-			</div><!-- .site-info -->
-		</div>
-	</div>
-</footer><!-- #colophon -->
+
+<footer class="site-footer">
+	<img src="<?php echo get_template_directory_uri(); ?>/public/images/footer.jpg" class="img-responsive" alt="" />
+	<div class="footer-content">
+		<div class="footer-logo">
+			<div class="logo-wrapper -light">
+   			<?php get_template_part( 'partials/global/logo' ); ?>
+   		</div><!-- /logo-wrapper -->
+   	</div><!-- /footer-logo -->
+
+		<p class="text">Copyright &copy;<br/> Elegant Seagulls, Inc.<br/> All Rights Reserved<br/> I'm Jack Dusty.</p>
+
+
+		<a href="mailto:info@johnjohn.com" class="link">info@johnjohn.com</a>
+		<a href="" class="top-wrap">
+		<span class="top"></a>
+		</a>
+	</div><!-- /footer-content -->
+</footer><!-- site-footer -->
 
 </div><!-- .body -->
 

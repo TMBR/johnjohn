@@ -21,14 +21,11 @@
   </div><!-- /row -->
 
   <div class="row">
+
     <div class="col-sm-5 col-sm-offset-1">
-      <div class="content-card">
+      <?php get_template_part( 'partials/s4/content-card' ); ?>
+    </div><!-- /col -->
 
-          <p class="text">Sometimes when I'm deep in thought, I like to think about what my good friend Jack Dusty would do in my situation. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tempus tincidunt enim, in mattis orci viverra ac. Ut eleifend egestas tincidunt. Etiam bibendum suscipit augue. Vestibulum malesuada leo id commodo feugiat. Praesent at egestas enim. </p>
-          <a href="" class="link">The Gear</a>
-
-      </div>
-    </div>
     <div class="col-sm-6">
       <div class="highlight -surf -relative">
         <img src="<?php echo get_template_directory_uri(); ?>/public/images/image4.jpg" class="-absolute img-responsive" alt="">

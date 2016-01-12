@@ -16,6 +16,7 @@
 			SiteApp.Preloader();
 			SiteApp.Slider();
 			SiteApp.Heroeffect();
+			//SiteApp.Spinimg();
 			SiteApp.Lightbox();
 
 			// Call this to show all animited items
@@ -162,6 +163,25 @@
 						body.removeClass('vid-revealed');
 					}
 				}
+			});
+
+		},
+
+		Spinimg: function() {
+
+			var rangeSlider = document.getElementById('slider-range');
+
+			noUiSlider.create(rangeSlider, {
+				start: [12],
+				range: {
+					'min': [1],
+					'max': [24]
+				}
+			});
+
+			rangeSlider.noUiSlider.on('update',function( values, handle ){
+				imgid = '/public/images/spin/img' + Math.floor(values[handle]) + '.jpg';
+				$('#spin-img').attr('src',imgid);
 			});
 
 		},

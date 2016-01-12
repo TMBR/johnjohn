@@ -53,6 +53,7 @@
 
       // 'assets/vendor/isotope/jquery.isotope.js',                         Isotope (filter & sort layouts) - http://isotope.metafizzy.co/
       'assets/vendor/waypoints/lib/jquery.waypoints.js',                //  Waypoints (trigger function on scroll) - http://imakewebthings.com/waypoints/
+      'assets/vendor/nouislider/distribute/nouislider.js',
 
       'assets/vendor/jquery-unveil/jquery.unveil.js',                   //  jQuery Unveil (lazy load assets) - http://luis-almeida.github.io/unveil/
       'assets/vendor/jquery.easing/js/jquery.easing.js',                //  jQuery Easing (advanced easing options) - http://gsgd.co.uk/sandbox/jquery/easing/

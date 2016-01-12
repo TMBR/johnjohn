@@ -36,7 +36,8 @@
     "waypoints": "~4.0.0",
     "responsejs": "~0.9.1",
     "animate.css": "animate-css#~3.4.0",
-    "flexslider": "~2.5.0"
+    "flexslider": "~2.5.0",
+    "nouislider": "~8.2.1"
   },
   "resolutions": {
     "jquery": "~2.1.0"

@@ -10374,6 +10374,13 @@ input[type=submit] {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
 
+.vid-wrap.-special {
+  width: 100%; }
+
+.vid-wrap.-special img {
+  width: 100%;
+  height: auto; }
+
 .vid-wrap.-special .play-button {
   top: 44%;
   left: 30.5%;
@@ -10646,8 +10653,12 @@ a.handle {
   margin: 15px;
   text-align: center; }
 
+.site-footer img {
+  width: 100%;
+  height: auto; }
+
 .site-footer .footer-content {
-  top: 250px;
+  bottom: 100px;
   left: 50%;
   z-index: 999;
   position: absolute;

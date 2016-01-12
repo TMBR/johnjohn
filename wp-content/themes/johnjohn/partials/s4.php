@@ -10,7 +10,7 @@
 
   <div class="row">
     <div class="col-sm-6">
-      <div class="vert-caption">
+      <div class="vert-caption -left -overlay">
         <p class="caption -white">Jack Dusty</p>
         <img src="<?php echo get_template_directory_uri(); ?>/public/images/jj.jpg" class="img-responsive" alt="" />
       </div>

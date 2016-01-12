@@ -16,7 +16,7 @@
 			SiteApp.Preloader();
 			SiteApp.Slider();
 			SiteApp.Heroeffect();
-			//SiteApp.Lightbox();
+			SiteApp.Lightbox();
 
 			// Call this to show all animited items
 			// SiteApp.ShowAnimated();
@@ -126,8 +126,13 @@
 		// Lightbox Gallery
 		Lightbox: function() {
 
-			$('.imagepop').magnificPopup({type:'image'});
+			//$('.imagepop').magnificPopup({type:'image'});
 
+			$('.js-popupvideo').magnificPopup({
+				type: 'iframe',
+				removalDelay: 300,
+				mainClass: 'mfp-fade'
+			});
 		},
 
 

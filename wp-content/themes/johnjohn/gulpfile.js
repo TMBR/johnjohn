@@ -49,13 +49,14 @@
 
 
       'assets/vendor/flexslider/jquery.flexslider.js',                  //  Flexslider (slideshow) - http://www.woothemes.com/flexslider/
+      'assets/vendor/magnific-popup/dist/jquery.magnific-popup.js',      // Magnific Popup (responsive lightbox) - http://dimsemenov.com/plugins/magnific-popup/
+
       // 'assets/vendor/isotope/jquery.isotope.js',                         Isotope (filter & sort layouts) - http://isotope.metafizzy.co/
       'assets/vendor/waypoints/lib/jquery.waypoints.js',                //  Waypoints (trigger function on scroll) - http://imakewebthings.com/waypoints/
 
       'assets/vendor/jquery-unveil/jquery.unveil.js',                   //  jQuery Unveil (lazy load assets) - http://luis-almeida.github.io/unveil/
       'assets/vendor/jquery.easing/js/jquery.easing.js',                //  jQuery Easing (advanced easing options) - http://gsgd.co.uk/sandbox/jquery/easing/
       // 'assets/vendor/jquery.stellar/jquery.stellar.js',                  Stellar.js (parallax helper) - http://markdalgleish.com/projects/stellar.js/
-      // 'assets/vendor/magnific-popup/dist/jquery.magnific-popup.js',      Magnific Popup (responsive lightbox) - http://dimsemenov.com/plugins/magnific-popup/
       // 'assets/vendor/pace/pace.js',                                      PACE (page load progress bar) - http://github.hubspot.com/pace/docs/welcome/
       // 'assets/vendor/videojs/dist/video-js/video.js',                    Video.js (work with HTML5 video) - http://videojs.com/
       'assets/vendor/respond/src/respond.js',                           //  Respond.js (media query helper for IE) - https://github.com/scottjehl/Respond

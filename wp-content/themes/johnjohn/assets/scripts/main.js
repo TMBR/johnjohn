@@ -109,7 +109,7 @@
 
 				 $('.flexslider').flexslider({
 			    animation: "slide",
-			    slideshow: false, // auto play on load
+			    slideshow: true, // auto play on load
 			    slideshowSpeed: 4000,
 					animationSpeed: 600,
 					pauseOnHover: true,

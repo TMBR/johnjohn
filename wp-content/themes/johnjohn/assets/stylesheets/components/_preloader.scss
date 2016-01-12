@@ -11,7 +11,7 @@
     height: 170px;
     width: 170px;
     @include border-radius(50%);
-    animation: surfer 1s infinite forwards;
+    animation: surfer 1s infinite;
   }
 }
 

@@ -27,7 +27,7 @@
     </div><!-- /col -->
 
     <div class="col-sm-6">
-      <div class="highlight -surf -relative">
+      <div class="highlight -no-ws" style="background-image: url('<?php echo get_template_directory_uri(); ?>/public/images/surfboard.jpg');">
         <img src="<?php echo get_template_directory_uri(); ?>/public/images/image4.jpg" class="-absolute img-responsive" alt="">
         <h4 class="broken-text">
           <span class="line animationx" data-animationx="animationx-fade-in-left">This</span>

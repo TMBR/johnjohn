@@ -154,7 +154,27 @@ _throttle = function(func, wait, options) {
 
 			$(document).ready(function() {
 
-			  $('#vid-gallery').flexslider({
+			  // $('#vid-gallery').flexslider({
+			  //   animation: "slide",
+			  //   slideshow: false, // auto play on load
+			  //   slideshowSpeed: 4000,
+					// animationSpeed: 600,
+					// pauseOnHover: true,
+					// controlNav: true, //Boolean: Create navigation for paging control of each clide? Note: Leave true for manualControls usage
+					// directionNav: false
+			  // });
+
+			  // $('#full-gallery').flexslider({
+			  //   animation: "slide",
+			  //   slideshow: false, // auto play on load
+			  //   slideshowSpeed: 4000,
+					// animationSpeed: 600,
+					// pauseOnHover: true,
+					// controlNav: true, //Boolean: Create navigation for paging control of each clide? Note: Leave true for manualControls usage
+					// directionNav: false
+			  // });
+
+				 $('.flexslider').flexslider({
 			    animation: "slide",
 			    slideshow: false, // auto play on load
 			    slideshowSpeed: 4000,
@@ -163,7 +183,6 @@ _throttle = function(func, wait, options) {
 					controlNav: true, //Boolean: Create navigation for paging control of each clide? Note: Leave true for manualControls usage
 					directionNav: false
 			  });
-
 			});
 
 		},

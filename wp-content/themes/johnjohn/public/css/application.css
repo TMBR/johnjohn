@@ -9798,7 +9798,7 @@ blockquote {
     font-family: "Playfair Display", serif;
     font-size: 2.25em; }
 
-.-relative, .highlight {
+.-relative {
   position: relative; }
 
 .-absolute {
@@ -9810,15 +9810,11 @@ blockquote {
 .-white {
   color: #FFF; }
 
-.broken-text {
-  font-family: "proxima-nova", sans-serif;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 50px;
-  letter-spacing: 0.4em;
-  text-transform: uppercase; }
-  .broken-text .line {
-    display: block; }
+.-no-ws-r {
+  margin-right: -15px; }
+
+.-even-ws {
+  margin-left: -50px; }
 
 #page-main {
   margin-top: 30px;
@@ -10363,7 +10359,7 @@ input[type=submit] {
 
 .vert-caption {
   position: relative;
-  margin-bottom: 60px; }
+  margin-bottom: 30px; }
 
 .vert-caption .caption {
   position: absolute;
@@ -10376,16 +10372,50 @@ input[type=submit] {
   top: 30px; }
 
 .highlight {
+  position: relative;
   background-repeat: no-repeat;
   background-position: top left;
-  margin-right: -15px;
-  margin-left: 50px;
-  height: 300px; }
+  margin-left: 50px; }
   .highlight .broken-text {
     padding-top: 95px; }
   .highlight img {
     margin-left: 25%;
     margin-top: -40px; }
+
+.broken-text {
+  font-family: "proxima-nova", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 50px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase; }
+  .broken-text .line {
+    display: block; }
+
+.broken-text.-inline {
+  width: 100%;
+  font-size: 12px;
+  letter-spacing: 0.025em; }
+  .broken-text.-inline,
+  .broken-text.-inline .line,
+  .broken-text.-inline .strike {
+    float: left;
+    display: block; }
+  .broken-text.-inline .-center {
+    margin: 0 20%; }
+  .broken-text.-inline .strike {
+    font: 3.25em "Playfair Display", serif;
+    margin-left: 30px;
+    top: -10px;
+    position: relative; }
+    .broken-text.-inline .strike::after {
+      content: '';
+      top: 60%;
+      left: -10%;
+      position: absolute;
+      width: 120%;
+      height: 4px;
+      background: #535353; }
 
 /* Layout */
 .page-header {
@@ -10477,5 +10507,35 @@ a.handle {
 .large-video {
   margin-top: 75px;
   height: 715px; }
+
+.card-gallery {
+  margin-top: 120px; }
+
+.card-overlay,
+.card-gallery .flex-control-nav.flex-control-paging {
+  width: 16.6666666667%;
+  left: 8.3333333333%;
+  background: #FFF;
+  margin-left: 15px; }
+
+.card-overlay {
+  z-index: 9;
+  position: absolute;
+  padding: 0 20px;
+  height: 95%; }
+
+.card-gallery .flex-control-nav.flex-control-paging {
+  bottom: 0;
+  height: 5%;
+  text-align: left;
+  padding-left: 20px; }
+  .card-gallery .flex-control-nav.flex-control-paging li {
+    line-height: 100%;
+    margin-top: 10%; }
+  .card-gallery .flex-control-nav.flex-control-paging li:first-child {
+    margin-left: 0; }
+
+.card-gallery .broken-text {
+  margin-left: 30px; }
 
 /* Templates */

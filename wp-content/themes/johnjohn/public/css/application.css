@@ -10160,6 +10160,7 @@ input[type=submit] {
     background: url(../../public/images/page-loader.gif) no-repeat center center;
     margin: -24px 0px 0px -24px; }
 
+/* url("../../public/images/surfer-dude.png") no-repeat top left */
 .content-card {
   padding-bottom: 30px;
   /* VARIANTS */

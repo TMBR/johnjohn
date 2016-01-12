@@ -1,6 +1,7 @@
 
 
 .content-card {
+
   padding-bottom: $gutter*2;
   > .img {
     max-width: 100%;
@@ -20,25 +21,36 @@
     padding-bottom: 5px;
   }
 
-}
 
 
-.content-card {
+  /* VARIANTS */
 
-  &.-noimg > .heading {
-    margin-top: $gutter*2;
-  }
   &.-overlap {
     margin-top: -50%;
-    position: relative;
-    z-index: 9;
-    @include transition(margin .75s);
-    .vid-reveal & {
-       margin-top: 20px;
+    @include relative($z:9);
+    > .img {
+      margin-right: 5%;
+      width: 95%;
     }
   }
-  &.-overlap > .img {
-    margin-right: 5%;
-    width: 95%;
+
+
+
+  /* CONTEXTUAL */
+
+  .hero-overlap &.-overlap {
+    @include transition(all .75s);
+    /* when .vid-reveal is added to body, this div gets pushed down */
+    .vid-reveal & {
+      margin-top: 20px;
+    }
   }
-}
+
+
+
+
+} /* @end content-card */
+
+
+
+

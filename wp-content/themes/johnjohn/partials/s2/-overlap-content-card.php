@@ -1,6 +1,6 @@
-<div id="push-down" class="content-card -overlap animation" data-animation="animation-fade-in-down">
+<div id="push-down" class="content-card -overlap">
 
-  <img src="<?php echo get_template_directory_uri(); ?>/public/images/him.jpg" alt="" class="img" />
-  <p class="text">Hey gang, my name is John John Florence. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tempus tincidunt enim, in mattis orci viverra ac. Ut eleifend egestas tincidunt. Etiam bibendum suscipit augue. Vestibulum malesuada leo id commodo feugiat. Praesent at egestas enim. </p>
+  <img src="<?php echo get_template_directory_uri(); ?>/public/images/him.jpg" alt="" class="img animation" data-animation="animation-fade-in-down" />
+  <p class="text animation" data-animation="animation-fade-in-up">Hey gang, my name is John John Florence. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tempus tincidunt enim, in mattis orci viverra ac. Ut eleifend egestas tincidunt. Etiam bibendum suscipit augue. Vestibulum malesuada leo id commodo feugiat. Praesent at egestas enim. </p>
 
 </div><!-- .content-card -->

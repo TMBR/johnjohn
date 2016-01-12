@@ -10,7 +10,7 @@
             <?php get_template_part( 'partials/global/logo' ); ?>
           </div><!-- .logo-wrapper -->
 
-          <a href="" class="play-button -animated" id="hero-play"></a>
+          <button class="play-button -animated" id="hero-play" data-animation="animation-fade-in-down"></button>
 
         </div><!-- .leftwrap -->
       </div><!-- /col -->

@@ -1,9 +1,6 @@
 <div class="large-video -relative animation" data-animation="animation-fade-in-up">
 
-  <section class="rotated-text -right -center">
-    <p class="content -text">Call me old Jack Dusty</p>
-    <div class="rule"></div>
-  </section>
+  <?php get_template_part( 'partials/s3/rotated-text' ); ?>
 
   <div class="container-fluid">
     <div class="row">

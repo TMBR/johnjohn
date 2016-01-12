@@ -27,7 +27,7 @@
     </div><!-- /col -->
 
     <div class="col-sm-6">
-      <div class="highlight -no-ws" style="background-image: url('<?php echo get_template_directory_uri(); ?>/public/images/surfboard.jpg');">
+      <div class="highlight -no-ws-r" style="background-image: url('<?php echo get_template_directory_uri(); ?>/public/images/surfboard.jpg');">
         <img src="<?php echo get_template_directory_uri(); ?>/public/images/image4.jpg" class="-absolute img-responsive" alt="">
         <h4 class="broken-text">
           <span class="line animation" data-animation="animation-fade-in-left">This</span>
@@ -41,4 +41,4 @@
   </div><!-- /row -->
 
 
-</div><!-- /container --><div style="height: 500px; width: 100%;"></div>
+</div><!-- /container -->

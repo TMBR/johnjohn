@@ -10272,6 +10272,7 @@ input[type=submit] {
 
 .vid-wrap {
   display: block;
+  float: left;
   overflow: hidden;
   position: relative; }
 
@@ -10360,16 +10361,38 @@ input[type=submit] {
 .vert-caption {
   position: relative;
   margin-bottom: 30px; }
+  .vert-caption > .caption {
+    position: absolute;
+    line-height: 40px; }
 
-.vert-caption .caption {
-  position: absolute;
-  -webkit-transform-origin: top left;
-  transform-origin: top left;
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-  line-height: 40px;
-  left: 40px;
-  top: 30px; }
+.vert-caption.-left {
+  padding-left: 40px; }
+  .vert-caption.-left > .caption {
+    left: 40px;
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg); }
+
+.vert-caption.-right {
+  padding-right: 40px; }
+  .vert-caption.-right > .caption {
+    right: 0;
+    -webkit-transform-origin: top right;
+    transform-origin: top right;
+    -webkit-transform: rotate(90deg) translateX(100%);
+    transform: rotate(90deg) translateX(100%); }
+
+.vert-caption.-overlay > .caption {
+  z-index: 2; }
+
+.vert-caption.-overlay.-left {
+  padding-left: 0; }
+  .vert-caption.-overlay.-left > .caption {
+    top: 30px; }
+
+.vert-caption.-overlay.-right {
+  padding-right: 0; }
 
 .highlight {
   position: relative;
@@ -10531,7 +10554,12 @@ a.handle {
   padding-left: 20px; }
   .card-gallery .flex-control-nav.flex-control-paging li {
     line-height: 100%;
-    margin-top: 10%; }
+    height: 100%;
+    width: 9px;
+    position: relative; }
+    .card-gallery .flex-control-nav.flex-control-paging li a {
+      position: absolute;
+      bottom: 1px; }
   .card-gallery .flex-control-nav.flex-control-paging li:first-child {
     margin-left: 0; }
 

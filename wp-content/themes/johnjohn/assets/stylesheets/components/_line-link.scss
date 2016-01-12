@@ -1,0 +1,27 @@
+.line-link {
+    font-weight: $fw-semi;
+    color: $text-gray;
+    border-bottom: 2px solid $text-gray;
+    padding-bottom: 5px;
+    @include relative;
+
+    &::after {
+      content:'';
+      background: darken(turquoise,5%);
+      width: 0;
+      height: 2px;
+
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      @include transition(width .3s linear);
+    }
+
+    &:hover {
+      color: darken($text-gray,5%);
+
+      &::after {
+        width: 150%;
+      }
+    }
+  }

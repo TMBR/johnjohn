@@ -28,7 +28,13 @@
   @include transform(translate(-50%,-50%));
 
 }
-
+.vid-wrap.-special {
+  width: 100%;
+}
+.vid-wrap.-special img {
+  width: 100%;
+  height: auto;
+}
 .vid-wrap.-special .play-button {
   @include absolute($t:44%,$l:30.5%,$z:1);
   @include transition(all .5s ease-in);

@@ -3,8 +3,13 @@
   margin: $gutter;
   text-align: center;
 }
+
+.site-footer img {
+  width: 100%;
+  height: auto;
+}
 .site-footer .footer-content {
-  @include absolute($t:250px,$l:50%,$z:999);
+  @include absolute($b:100px,$l:50%,$z:999);
   @include transform(translateX(-50%));
 }
 

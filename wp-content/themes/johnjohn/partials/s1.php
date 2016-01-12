@@ -27,7 +27,7 @@
 
         <div class="reveal animation" data-animation="animation-fade-in-up">
           <div class="videocover"></div>
-          <iframe width="100%" height="100%" id="herovid" src="http://www.youtube.com/embed/bTqVqk7FSmY?feature=oembed" frameborder="0" allowfullscreen=""></iframe>
+          <iframe width="100%" height="100%" id="herovid" data-src="http://www.youtube.com/embed/bTqVqk7FSmY" src="http://www.youtube.com/embed/bTqVqk7FSmY?feature=oembed" frameborder="0" allowfullscreen=""></iframe>
         </div><!-- /reveal -->
 
       </div><!-- .col -->

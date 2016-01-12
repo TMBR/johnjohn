@@ -134,22 +134,31 @@
 		// Hero Animation
 		Heroeffect: function() {
 
-			var play = $('#hero-play');
 			var body = $('body');
+			var play = $('#hero-play');
+
 			var herovid = $('#herovid');
+			var vidsrc = $('#herovid').attr('data-src');
+			var autoplay = '?feature=oembed&autoplay=1';
+			var autopause = '?feature=oembed&autoplay=0';
+			var vidplay = vidsrc.concat(autoplay);
+			var vidpause = vidsrc.concat(autopause);
+
+
 			play.on('click', function(event){
 				event.preventDefault();
 				if(body.hasClass('vid-reveal')) {
 					body.removeClass('vid-reveal').addClass('vid-revealed');
+					herovid.attr('src',vidpause);
 				} else {
 					body.addClass('vid-reveal');
-					herovid.trigger('click');
+					herovid.attr('src',vidplay);
 					if(body.hasClass('vid-revealed'))	{
 						body.removeClass('vid-revealed');
 					}
 				}
 			});
-			// https://css-tricks.com/play-button-youtube-and-vimeo-api/
+
 		},
 
 

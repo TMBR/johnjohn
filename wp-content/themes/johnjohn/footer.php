@@ -3,7 +3,7 @@
 <!-- #page-main -->
 </div>
 
-<footer class="site-footer">
+<footer class="site-footer animation" data-animation="animation-fade-in-up">
 	<img src="<?php echo get_template_directory_uri(); ?>/public/images/footer.jpg" class="img-responsive" alt="" />
 	<div class="footer-content">
 		<div class="footer-logo">

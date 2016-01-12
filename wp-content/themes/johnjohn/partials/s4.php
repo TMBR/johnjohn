@@ -14,8 +14,12 @@
       </div>
     </div>
     <div class="col-sm-5">
-
-    </div>
+      <div id="spin_imgwrap">
+        <img id="spin_img" src="/public/images/spin/img15.jpg" alt="" />
+      </div>
+      <div id="slider-range"></div>
+      <div id="slider-range-value"></div>
+    </div><!-- /col -->
   </div><!-- /row -->
 
   <div class="row">

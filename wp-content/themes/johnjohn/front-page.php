@@ -15,6 +15,8 @@ get_template_part( 'partials/s4' );
 
 get_template_part( 'partials/s5' );
 
+get_template_part( 'partials/s6' );
+
 
 
 

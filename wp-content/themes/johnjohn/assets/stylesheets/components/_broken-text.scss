@@ -1,0 +1,40 @@
+
+.broken-text {
+  font-family: $proxima;
+  font-weight: $fw-semi;
+  font-size: 18px;
+  line-height: 50px;
+  @include spacing(400);
+  text-transform: uppercase;
+  .line {
+    display: block;
+
+  }
+}
+
+.broken-text.-inline {
+  width: 100%;
+  font-size: 12px;
+  @include spacing(25);
+  &,
+  .line,
+  .strike {
+    float: left;
+    display: block;
+  }
+  .-center {
+    margin: 0 20%;
+  }
+  .strike {
+    font: 3.25em $playfair;
+    margin-left: $gutter*2;
+    @include relative($t:-10px);
+    &::after {
+      content: '';
+      @include absolute($t:60%,$l:-10%);
+      width: 120%;
+      height: 4px;
+      background: $text-gray;
+    }
+  }
+}

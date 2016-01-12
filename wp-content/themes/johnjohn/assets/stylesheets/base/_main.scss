@@ -119,21 +119,14 @@ blockquote {
 	color: $white;
 }
 
-.broken-text {
-	font-family: $proxima;
-  font-weight: $fw-semi;
-  font-size: 18px;
-  line-height: 50px;
-  @include spacing(400);
-  text-transform: uppercase;
-  .line {
-  	display: block;
-  }
+.-no-ws-r {
+	margin-right: -$gutter;
 }
 
-.-no-ws {
-	margin-left: -$gutter;
+.-even-ws {
+	margin-left: -50px;
 }
+
 
 #page-main {
 
@@ -141,3 +134,5 @@ blockquote {
 	margin-left: 50px;
 	margin-right: 0;
 }
+
+

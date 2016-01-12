@@ -19,7 +19,7 @@
     background: rgba($dark-gray, 0.7);
   }
   img {
-    @include transform(scale(1.1));
+    @include transform(scale(1.07));
   }
 }
 
@@ -46,10 +46,10 @@
 }
 .vid-wrap.-special:hover {
   .play-button {
-    /*left: 29%;*/
+    background: darken(aqua,10%);
   }
   img {
-    @include transform(scale(1));
+    @include transform(scale(1.01));
     @include opacity(0.8);
   }
 }

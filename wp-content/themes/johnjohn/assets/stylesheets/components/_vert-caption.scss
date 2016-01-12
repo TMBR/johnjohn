@@ -1,14 +1,42 @@
 .vert-caption {
   position: relative;
   margin-bottom: $gutter*2;
+  > .caption {
+    @include absolute;
+    line-height: 40px;
+  }
 }
 
-.vert-caption .caption {
-  position: absolute;
-  transform-origin: top left;
-    @include transform(rotate(90deg));
-
-    line-height: 40px;
+.vert-caption.-left {
+  padding-left: 40px;
+  & > .caption {
     left: 40px;
-    top: $gutter*2;
+    transform-origin: top left;
+    @include transform(rotate(90deg));
+  }
+}
+
+.vert-caption.-right {
+  padding-right: 40px;
+  & > .caption {
+    right: 0;
+    transform-origin: top right;
+    @include transform(rotate(90deg) translateX(100%));
+  }
+}
+
+.vert-caption.-overlay {
+  & > .caption {
+    z-index: 2;
+  }
+
+  &.-left {
+    padding-left: 0;
+    & > .caption {
+      top: $gutter*2;
+    }
+  }
+  &.-right {
+    padding-right: 0;
+  }
 }

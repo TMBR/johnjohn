@@ -92,7 +92,7 @@
 				$('#preloader .spinner').delay(100).fadeOut(300, function() {
 					$('.body').animate({
 						opacity: 1
-					}, 300);
+					}, 300).addClass('ready');
 					$(this).parent().delay(300).fadeOut(500, function() {
 						SiteApp.Animated();
 					});

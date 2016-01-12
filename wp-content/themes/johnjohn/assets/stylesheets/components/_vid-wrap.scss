@@ -1,8 +1,9 @@
 
 .vid-wrap {
   display: block;
+  float: left;
   overflow: hidden;
-  @include relative
+  @include relative;
 }
 
 .vid-wrap .play-button {

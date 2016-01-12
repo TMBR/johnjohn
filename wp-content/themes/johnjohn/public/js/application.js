@@ -63,7 +63,7 @@ _throttle = function(func, wait, options) {
 			SiteApp.Preloader();
 			SiteApp.Slider();
 			SiteApp.Heroeffect();
-			//SiteApp.Spinimg();
+			SiteApp.Spinimg();
 			SiteApp.Lightbox();
 
 			// Call this to show all animited items

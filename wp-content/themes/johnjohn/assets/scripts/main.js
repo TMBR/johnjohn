@@ -16,7 +16,8 @@
 			SiteApp.Preloader();
 			SiteApp.Slider();
 			SiteApp.Heroeffect();
-			SiteApp.Spinimg();
+			SiteApp.Horizspin();
+			SiteApp.Vertspin();
 			SiteApp.Lightbox();
 
 			// Call this to show all animited items
@@ -167,11 +168,11 @@
 
 		},
 
-		Spinimg: function() {
+		Horizspin: function() {
 
-			var rangeSlider = document.getElementById('slider-range');
+			var horizSlider = document.getElementById('slider-range');
 
-			noUiSlider.create(rangeSlider, {
+			noUiSlider.create(horizSlider, {
 				start: [12],
 				range: {
 					'min': [1],
@@ -179,12 +180,46 @@
 				}
 			});
 
-			rangeSlider.noUiSlider.on('update',function( values, handle ){
-				var imgid = '/wp-content/themes/johnjohn/public/images/spin/img' + Math.floor(values[handle]) + '.jpg';
+			horizSlider.noUiSlider.on('update',function( values, handle ){
+				var imgid = '/wp-content/themes/johnjohn/public/images/prod2/img' + Math.floor(values[handle]) + '.jpg';
 
 				$('#spin-img').attr('src',imgid);
 			});
 
+		},
+
+		Vertspin: function() {
+			var vertSlider2 = document.getElementById('vert-slider2');
+
+			noUiSlider.create(vertSlider2, {
+				start: [6],
+				orientation: 'vertical',
+				range: {
+					'min': [1],
+					'max': [12]
+				}
+			});
+
+			vertSlider2.noUiSlider.on('update',function( values, handle ){
+				var imgid2 = '/wp-content/themes/johnjohn/public/images/prod3/img' + Math.floor(values[handle]) + '.jpg';
+
+				$('#vert-img2').attr('src',imgid2);
+			});
+
+			var imgWidth = $('#spinner2 .img-wrap').width();
+			var	rangeWidth = (imgWidth / 2) + 'px';
+
+			var rangeDiv = $('.range-wrap');
+
+			rangeDiv.css({
+				'left' : rangeWidth,
+				'width' : rangeWidth
+			})
+
+			$('#hide-slider2').on('click', function(){
+				$('#spinner2').addClass('begin');
+				rangeDiv.css('left', imgWidth + 20);
+			});
 		},
 
 

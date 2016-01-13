@@ -180,7 +180,8 @@
 			});
 
 			rangeSlider.noUiSlider.on('update',function( values, handle ){
-				imgid = '/public/images/spin/img' + Math.floor(values[handle]) + '.jpg';
+				var imgid = '/wp-content/themes/johnjohn/public/images/spin/img' + Math.floor(values[handle]) + '.jpg';
+
 				$('#spin-img').attr('src',imgid);
 			});
 

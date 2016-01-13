@@ -1,0 +1,130 @@
+
+
+
+
+.rotator {
+/* slider bar */
+  .noUi-horizontal {
+    height: 1px;
+    margin: 50px 0 30px 0;
+  }
+
+  .noUi-vertical {
+    width: 1px;
+    height: 100%;
+  }
+
+  .noUi-target {
+    @include border-radius(0);
+    border: none;
+    box-shadow: none;
+  }
+
+  .noUi-background {
+    background: $very-light-gray;
+    box-shadow: none;
+  }
+
+  /* mimic range slider style */
+  .ranger-overlay .line {
+    height: 100%;
+    width: 50px;
+    border-left: 1px solid $very-light-gray;
+    background: $white;
+    @include absolute($l:17px);
+  }
+
+  /* right half */
+  .noUi-origin {
+    @include border-radius(0);
+  }
+
+  /* handle */
+  .noUi-horizontal .noUi-handle,
+  .noUi-vertical .noUi-handle {
+
+    left: -17px;
+    top: -16px;
+
+  }
+
+  .noUi-vertical .noUi-handle {
+    left: -16px;
+    top: -17px;
+  }
+
+
+
+  .ranger-overlay .handle,
+  .noUi-handle {
+    width: 34px;
+    height: 34px;
+    border: 1px solid #d7d7d7;
+    border-radius: 50%;
+    background: #FFF;
+    cursor: default;
+    box-shadow: 0 2px 4px 0 $very-light-gray;
+  }
+
+  .noUi-active {
+    border-color: darken(#d7d7d7,10%);
+  }
+
+  .noUi-handle:before,
+  .noUi-handle:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 14px;
+    width: 1px;
+    background: #bebebe;
+    left: 14px;
+    top: 9px;
+  }
+
+  .ranger-overlay .handle {
+    @include absolute($t:45.4545%);
+    margin-top: -17px;
+    cursor: pointer;
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      background: rgba(#bebebe,0.5);
+      width: 10px;
+      height: 1px;
+      @include absolute($l:12px);
+      @include transition(background .4s ease-in, left .2s ease-in);
+    }
+    &::after {
+      top: 19px;
+      transform: rotate(-45deg);
+    }
+    &::before{
+      top: 12px;
+      transform: rotate(45deg);
+    }
+    &:hover {
+      &::before,
+      &::after {
+        background: aqua;
+        left: 12px;
+      }
+    }
+  }
+
+  .noUi-handle:after {
+    left: 17px;
+  }
+
+  .noUi-vertical .noUi-handle:before,
+  .noUi-vertical .noUi-handle:after {
+    width: 14px;
+    height: 1px;
+    left: 9px;
+    top: 14px;
+  }
+  .noUi-vertical .noUi-handle:after {
+    top: 17px;
+  }
+}

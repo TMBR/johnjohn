@@ -41,7 +41,7 @@
     margin-top: 0;
   }
   50% {
-    margin-top: -5px;
+    margin-top: -10px;
     @include opacity(1);
     color: $aqua;
   }
@@ -58,7 +58,7 @@
     margin-top: 0;
   }
   50% {
-    margin-top: 5px;
+    margin-top: 10px;
   @include opacity(1);
     color: $aqua;
   }

@@ -208,7 +208,7 @@
 				$('#vert-img1').attr('src',imgid1);
 			});
 
-			var imgWidth1 = $('#spinner1 .img-wrap').width();
+			var imgWidth1 = $('#spinner1 > .img-wrap > img').width();
 			var	rangeWidth1 = (imgWidth1 / 2) + 'px';
 
 			var rangeDiv1 = $('#rw1');
@@ -244,7 +244,7 @@
 				$('#vert-img2').attr('src',imgid2);
 			});
 
-			var imgWidth2 = $('#spinner2 .img-wrap').width();
+			var imgWidth2 = $('#spinner2 > .img-wrap > img').width();
 			var	rangeWidth2 = (imgWidth2 / 2) + 'px';
 
 			var rangeDiv2 = $('#rw2');

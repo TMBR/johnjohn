@@ -1,6 +1,6 @@
-<div class="rotator -horiz -overlap">
+<div class="rotator -horiz -overlap animation" data-animation="animation-fade-in-up">
   <div class="img-wrap">
-    <img id="spin-img" src="<?php echo get_template_directory_uri(); ?>/public/images/prod2/img15.jpg" width="250" alt="" />
+    <img id="spin-img" src="<?php echo get_template_directory_uri(); ?>/public/images/prod2/img15.jpg" width="225" alt="" />
   </div>
   <div class="prodinfo">
     <img src="<?php echo get_template_directory_uri(); ?>/public/images/hurley.png" alt="" class="brand" />

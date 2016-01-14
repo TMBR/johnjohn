@@ -40,10 +40,10 @@ $handle: 34px;
   &.begin {
     .arrow-flash {
       &.-up {
-        animation: flash-up .5s ease-out .5s;
+        animation: flash-up .75s ease-out .5s;
       }
        &.-down {
-        animation: flash-down .5s ease-out .5s;
+        animation: flash-down .75s ease-out .5s;
       }
     }
   }

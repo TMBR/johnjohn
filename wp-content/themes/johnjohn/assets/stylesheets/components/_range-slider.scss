@@ -1,8 +1,55 @@
 
-
+$range-unit : 9.09091%;
+$handle-pos: $range-unit*5;
+$handle: 34px;
+/**
+* this is the math the range slider script comes up with.
+* we use this when trying to center things around or on top of
+* the range handle.
+*
+* Handle Position = top value of .noUi-origin MINUS -17px (half the height of handle)
+*
+* for example - on the vert slider, the starting position is
+* set to 6.
+* so because range starts at 1 - to position something over
+* this handle :
+*
+* $range-unit * 5 = top value of .noUi-origin
+*
+* Handle position = ( $range-unit * 5 ) - 17px
+*/
 
 
 .rotator {
+
+  .arrow-flash {
+    @include absolute($z:102, $t:$range-unit*5);
+    @include opacity(0);
+    color: rgba($aqua,0.5);
+    font-size: 8px;
+    line-height: 100%;
+    &.-up {
+      @include transform(translate(-50%,-120%));
+      top: calc(45.45455% - 18px);
+    }
+    &.-down {
+      top: calc(45.45455% + 2px);
+      @include transform(translate(-50%,120%));
+    }
+  }
+  &.begin {
+    .arrow-flash {
+      &.-up {
+        animation: flash-up .5s ease-out .5s;
+      }
+       &.-down {
+        animation: flash-down .5s ease-out .5s;
+      }
+    }
+  }
+
+
+
 /* slider bar */
   .noUi-horizontal {
     height: 1px;
@@ -37,6 +84,7 @@
   /* right half */
   .noUi-origin {
     @include border-radius(0);
+
   }
 
   /* handle */
@@ -83,7 +131,7 @@
   }
 
   .ranger-overlay .handle {
-    @include absolute($t:45.4545%);
+    @include absolute($t:$range-unit*5);
     margin-top: -17px;
     cursor: pointer;
     &::before,

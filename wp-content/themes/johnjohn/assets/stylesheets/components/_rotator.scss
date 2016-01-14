@@ -2,7 +2,7 @@
 .rotator {
   &.-vert {
     @include relative;
-    padding-right: 50px;
+    padding-right: 75px;
   }
 
   &.-horiz {
@@ -11,12 +11,16 @@
 
   &.-overlap {
     @include absolute;
-    transform: translateY(-25%);
+    margin-top: -150px;
   }
 }
 
 .rotator.-vert > .img-wrap {
   display: inline-block;
+}
+
+.rotator.-vert > .img-wrap img {
+  max-width: 100%;
 }
 
 .rotator.-horiz > .img-wrap {

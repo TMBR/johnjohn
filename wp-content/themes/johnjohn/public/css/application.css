@@ -9728,6 +9728,7 @@ a.link {
     box-shadow: 0 0 160px 0 rgba(243, 156, 18, 0.5);
     -webkit-transform: translate(-50%, -50%) rotate(360deg);
     transform: translate(-50%, -50%) rotate(360deg); } }
+
 @keyframes surfer {
   0% {
     -webkit-transform: translate(-50%, -50%) rotate(0deg);

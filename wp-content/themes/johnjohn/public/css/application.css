@@ -9834,6 +9834,18 @@ a.link {
     filter: alpha(opacity=100);
     color: rgba(0, 204, 204, 0.5); } }
 
+@-webkit-keyframes line-grow {
+  from {
+    width: 0; }
+  to {
+    width: 120%; } }
+
+@keyframes line-grow {
+  from {
+    width: 0; }
+  to {
+    width: 120%; } }
+
 /* Base */
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -10736,9 +10748,11 @@ input[type=submit] {
       top: 60%;
       left: -10%;
       position: absolute;
-      width: 120%;
+      width: 0;
       height: 4px;
-      background: #535353; }
+      background: #535353;
+      -webkit-animation: line-grow .3s ease-in 5s forwards;
+      animation: line-grow .3s ease-in 5s forwards; }
 
 .rotator.-vert {
   position: relative;

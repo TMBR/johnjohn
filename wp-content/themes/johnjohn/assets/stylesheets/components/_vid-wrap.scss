@@ -52,7 +52,7 @@
 }
 .vid-wrap.-special:hover {
   .play-button {
-    background: darken(aqua,10%);
+    background: $aqua;
   }
   img {
     @include transform(scale(1.01));

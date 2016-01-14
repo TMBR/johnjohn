@@ -11,7 +11,8 @@
       <div class="line"></div>
       <div class="handle"></div>
     </div><!-- /ranger-overlay -->
-
+    <span class="arrow-flash -up"><i class="fa fa-arrow-up fa-2x"></i></span>
+    <span class="arrow-flash -down"><i class="fa fa-arrow-down fa-2x"></i></span>
     <div id="vert-slider2"></div>
 
     <div class="vert-caption prodinfo -right">

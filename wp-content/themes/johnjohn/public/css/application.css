@@ -9756,15 +9756,83 @@ a.link {
 
 @-webkit-keyframes ready-fade-in {
   from {
-    opacity: 0; }
+    opacity: 0;
+    filter: alpha(opacity=0); }
   to {
-    opacity: 1; } }
+    opacity: 1;
+    filter: alpha(opacity=100); } }
 
 @keyframes ready-fade-in {
   from {
-    opacity: 0; }
+    opacity: 0;
+    filter: alpha(opacity=0); }
   to {
-    opacity: 1; } }
+    opacity: 1;
+    filter: alpha(opacity=100); } }
+
+@-webkit-keyframes flash-up {
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    margin-top: 0; }
+  50% {
+    margin-top: -10px;
+    opacity: 1;
+    filter: alpha(opacity=100);
+    color: #00cccc; }
+  90% {
+    margin-top: 0;
+    opacity: 1;
+    filter: alpha(opacity=100);
+    color: rgba(0, 204, 204, 0.5); } }
+
+@keyframes flash-up {
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    margin-top: 0; }
+  50% {
+    margin-top: -10px;
+    opacity: 1;
+    filter: alpha(opacity=100);
+    color: #00cccc; }
+  90% {
+    margin-top: 0;
+    opacity: 1;
+    filter: alpha(opacity=100);
+    color: rgba(0, 204, 204, 0.5); } }
+
+@-webkit-keyframes flash-down {
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    margin-top: 0; }
+  50% {
+    margin-top: 10px;
+    opacity: 1;
+    filter: alpha(opacity=100);
+    color: #00cccc; }
+  90% {
+    margin-top: 0;
+    opacity: 1;
+    filter: alpha(opacity=100);
+    color: rgba(0, 204, 204, 0.5); } }
+
+@keyframes flash-down {
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    margin-top: 0; }
+  50% {
+    margin-top: 10px;
+    opacity: 1;
+    filter: alpha(opacity=100);
+    color: #00cccc; }
+  90% {
+    margin-top: 0;
+    opacity: 1;
+    filter: alpha(opacity=100);
+    color: rgba(0, 204, 204, 0.5); } }
 
 /* Base */
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -10674,18 +10742,20 @@ input[type=submit] {
 
 .rotator.-vert {
   position: relative;
-  padding-right: 50px; }
+  padding-right: 75px; }
 
 .rotator.-horiz {
   margin-left: 50px; }
 
 .rotator.-overlap {
   position: absolute;
-  -webkit-transform: translateY(-25%);
-  transform: translateY(-25%); }
+  margin-top: -150px; }
 
 .rotator.-vert > .img-wrap {
   display: inline-block; }
+
+.rotator.-vert > .img-wrap img {
+  max-width: 100%; }
 
 .rotator.-horiz > .img-wrap {
   text-align: center; }
@@ -10742,11 +10812,50 @@ input[type=submit] {
   text-align: center;
   margin: 15px 0; }
 
+/**
+* this is the math the range slider script comes up with.
+* we use this when trying to center things around or on top of
+* the range handle.
+*
+* Handle Position = top value of .noUi-origin MINUS -17px (half the height of handle)
+*
+* for example - on the vert slider, the starting position is
+* set to 6.
+* so because range starts at 1 - to position something over
+* this handle :
+*
+* $range-unit * 5 = top value of .noUi-origin
+*
+* Handle position = ( $range-unit * 5 ) - 17px
+*/
 .rotator {
   /* slider bar */
   /* mimic range slider style */
   /* right half */
   /* handle */ }
+  .rotator .arrow-flash {
+    top: 45.45455%;
+    z-index: 102;
+    position: absolute;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    color: rgba(0, 204, 204, 0.5);
+    font-size: 8px;
+    line-height: 100%; }
+    .rotator .arrow-flash.-up {
+      -webkit-transform: translate(-50%, -120%);
+      transform: translate(-50%, -120%);
+      top: calc(45.45455% - 18px); }
+    .rotator .arrow-flash.-down {
+      top: calc(45.45455% + 2px);
+      -webkit-transform: translate(-50%, 120%);
+      transform: translate(-50%, 120%); }
+  .rotator.begin .arrow-flash.-up {
+    -webkit-animation: flash-up .75s ease-out .5s;
+    animation: flash-up .75s ease-out .5s; }
+  .rotator.begin .arrow-flash.-down {
+    -webkit-animation: flash-down .75s ease-out .5s;
+    animation: flash-down .75s ease-out .5s; }
   .rotator .noUi-horizontal {
     height: 1px;
     margin: 50px 0 30px 0; }
@@ -10802,7 +10911,7 @@ input[type=submit] {
     left: 14px;
     top: 9px; }
   .rotator .ranger-overlay .handle {
-    top: 45.4545%;
+    top: 45.45455%;
     position: absolute;
     margin-top: -17px;
     cursor: pointer; }
@@ -10926,7 +11035,7 @@ a.handle {
 
 .large-video {
   margin-top: 75px;
-  height: 715px; }
+  /*  height: 715px;*/ }
 
 .card-gallery {
   margin-top: 120px; }

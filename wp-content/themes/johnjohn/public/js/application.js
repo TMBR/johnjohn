@@ -64,7 +64,8 @@ _throttle = function(func, wait, options) {
 			SiteApp.Slider();
 			SiteApp.Heroeffect();
 			SiteApp.Horizspin();
-			SiteApp.Vertspin();
+			SiteApp.Vertspin1();
+			SiteApp.Vertspin2();
 			SiteApp.Lightbox();
 
 			// Call this to show all animited items
@@ -235,7 +236,44 @@ _throttle = function(func, wait, options) {
 
 		},
 
-		Vertspin: function() {
+		Vertspin1: function() {
+
+			var vertSlider1 = document.getElementById('vert-slider1');
+
+			noUiSlider.create(vertSlider1, {
+				start: [6],
+				orientation: 'vertical',
+				range: {
+					'min': [1],
+					'max': [12]
+				}
+			});
+
+			vertSlider1.noUiSlider.on('update',function( values, handle ){
+				var imgid1 = '/wp-content/themes/johnjohn/public/images/prod1/img' + Math.floor(values[handle]) + '.jpg';
+
+				$('#vert-img1').attr('src',imgid1);
+			});
+
+			var imgWidth1 = $('#spinner1 .img-wrap').width();
+			var	rangeWidth1 = (imgWidth1 / 2) + 'px';
+
+			var rangeDiv1 = $('#rw1');
+
+			rangeDiv1.css({
+				'left' : rangeWidth1,
+				'width' : rangeWidth1
+			})
+
+			$('#hide-slider1').on('click', function(){
+				$('#spinner1').addClass('begin');
+				rangeDiv1.css('left', imgWidth1 + 20);
+			});
+		},
+
+
+		Vertspin2: function() {
+
 			var vertSlider2 = document.getElementById('vert-slider2');
 
 			noUiSlider.create(vertSlider2, {
@@ -253,19 +291,19 @@ _throttle = function(func, wait, options) {
 				$('#vert-img2').attr('src',imgid2);
 			});
 
-			var imgWidth = $('#spinner2 .img-wrap').width();
-			var	rangeWidth = (imgWidth / 2) + 'px';
+			var imgWidth2 = $('#spinner2 .img-wrap').width();
+			var	rangeWidth2 = (imgWidth2 / 2) + 'px';
 
-			var rangeDiv = $('.range-wrap');
+			var rangeDiv2 = $('#rw2');
 
-			rangeDiv.css({
-				'left' : rangeWidth,
-				'width' : rangeWidth
+			rangeDiv2.css({
+				'left' : rangeWidth2,
+				'width' : rangeWidth2
 			})
 
 			$('#hide-slider2').on('click', function(){
 				$('#spinner2').addClass('begin');
-				rangeDiv.css('left', imgWidth + 20);
+				rangeDiv2.css('left', imgWidth2 + 20);
 			});
 		},
 

@@ -1,18 +1,21 @@
 <div class="container-fluid">
-    <div class="row">
-      <div class="col-xs-2 col-xs-offset-3">
-        <img src="<?php echo get_template_directory_uri(); ?>/public/images/placeholder.jpg" class="img-responsive" alt="" />
+  <div class="row">
 
-      </div>
-      <div class="col-xs-5">
-        <?php get_template_part( 'partials/s6/content-card' ); ?>
-         <div class="vert-caption -right animation" style="float: left;" data-animation="animation-fade-in-down">
-         <p class="caption">Get Some</p>
+    <div class="col-xs-4 col-xs-offset-1">
+      <?php get_template_part( 'partials/s6/rotator' ); ?>
+    </div><!-- /col -->
+
+    <div class="col-xs-5 col-xs-offset-1">
+      <?php get_template_part( 'partials/s6/content-card' ); ?>
+
+      <div class="vert-caption -right animation" style="float: left;" data-animation="animation-fade-in-down">
+        <p class="caption">Get Some</p>
         <a href="https://www.youtube.com/watch?v=OnqnCoPLdyw" class="vid-wrap -center js-popupvideo" >
           <button class="play-button"></button>
           <img src="<?php echo get_template_directory_uri(); ?>/public/images/image5.jpg" alt="" class="img-responsive" />
         </a>
-        </div>
-      </div>
-    </div>
-    </div>
+      </div><!-- /vert-caption -->
+
+    </div><!-- /col -->
+  </div><!-- /row -->
+</div><!-- /container -->

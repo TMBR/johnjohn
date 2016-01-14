@@ -1,5 +1,5 @@
 
-@keyframes surfer {
+@include keyframes(surfer) {
   0% {
     transform: translate(-50%,-50%) rotate(0deg) ;
     box-shadow: 0 0 0 rgba($orange,0.5);
@@ -11,7 +11,7 @@
   }
 }
 
-@keyframes bg-change {
+@include keyframes(bg-change) {
   0% {
     background: $white;
   }
@@ -25,7 +25,7 @@
   }
 }
 
-@keyframes ready-fade-in {
+@include keyframes(ready-fade-in){
   from {
     @include opacity(0);
   }
@@ -34,8 +34,7 @@
   }
 }
 
-
-@keyframes flash-up {
+@include keyframes(flash-up){
   0% {
     @include opacity(0);
     margin-top: 0;
@@ -52,7 +51,7 @@
   }
 }
 
-@keyframes flash-down {
+@include keyframes(flash-down){
   0% {
     @include opacity(0);
     margin-top: 0;
@@ -69,7 +68,7 @@
   }
 }
 
-@keyframes line-grow {
+@include keyframes(line-grow) {
   from {
     width: 0;
   }
@@ -77,4 +76,6 @@
     width: 120%;
   }
 }
+
+
 

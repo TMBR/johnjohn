@@ -74,6 +74,7 @@
 
 			// Window Scroll functions
 			$(window).on('scroll', _throttle(function(){
+				//if ( $(window).scrollTop() > 10) {}
 				/* do your normal scroll stuff here, but it'll be
 				 * more-reasonably controlled, so as to not peg
 				 * the host machine's processor */
@@ -281,7 +282,7 @@
 					}
 					delay = 0;
 				}, {
-					offset: '70%'
+					offset: '90%'
 				});
 
 			});

@@ -15,7 +15,7 @@
     </div><!-- /col -->
 
     <div class="col-sm-3">
-      <div data-scroll-speed="9">
+      <div class="ss-ease speed-wrap2" data-scroll-speed="9">
         <?php get_template_part( 'partials/s4/rotator' ); ?>
       </div><!-- /scroll speed -->
     </div><!-- /col -->
@@ -37,11 +37,11 @@
 
         <div class="highlight -no-ws-r animation" data-animation="animation-fade-in-right" style="background-image: url('<?php echo get_template_directory_uri(); ?>/public/images/surfboard.jpg');">
 
-          <div data-scroll-speed="5">
+          <div class="ss-ease" data-scroll-speed="5">
             <img src="<?php echo get_template_directory_uri(); ?>/public/images/image4.jpg" class="-absolute img-responsive animation" data-animation="animation-fade-in-down" alt="">
           </div><!-- /scroll speed -->
 
-          <div class="speed-wrap -absolute" data-scroll-speed="9">
+          <div class="speed-wrap ss-ease -absolute" data-scroll-speed="9">
             <h4 class="broken-text animation -relative" data-animation="animation-fade-in-down">
               <span class="line animation" data-animation="animation-fade-in-left">This</span>
               <span class="line animation" data-animation="animation-fade-in-left" data-delay="300">Is How</span>

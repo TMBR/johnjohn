@@ -2,7 +2,7 @@
   <div class="row">
 
     <div class="col-xs-4 col-xs-offset-1">
-      <div class="speed-wrap -absolute" data-scroll-speed="9">
+      <div class="speed-wrap -absolute ss-ease" data-scroll-speed="9">
         <?php get_template_part( 'partials/s6/rotator' ); ?>
       </div><!-- /scroll-speed -->
     </div><!-- /col -->

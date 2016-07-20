@@ -135,4 +135,7 @@ blockquote {
 	margin-right: 0;
 }
 
+.ss-ease {
+	@include transition-transform(.75s ease-out);
+}
 

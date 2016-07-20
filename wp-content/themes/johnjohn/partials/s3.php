@@ -2,7 +2,7 @@
 
   <?php get_template_part( 'partials/s3/rotated-text' ); ?>
 
-  <div class="container-fluid" data-scroll-speed="8">
+  <div class="container-fluid ss-ease" data-scroll-speed="5">
     <div class="row">
       <div class="col-sm-10 col-sm-offset-1">
 

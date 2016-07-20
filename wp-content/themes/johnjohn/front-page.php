@@ -1,23 +1,33 @@
 <?php
 
-get_header();
+get_header(); ?>
 
 
 
+<section class="pg-section s1" >
+<?php get_template_part( 'partials/s1' ); ?>
+</section>
 
-get_template_part( 'partials/s1' );
+<section class="pg-section s2" >
+<?php get_template_part( 'partials/s2' ); ?>
+</section>
 
-get_template_part( 'partials/s2' );
+<section class="pg-section s3" >
+<?php get_template_part( 'partials/s3' ); ?>
+</section>
 
-get_template_part( 'partials/s3' );
+<section class="pg-section s4" style="margin-top: -75px;">
+<?php get_template_part( 'partials/s4' ); ?>
+</section>
 
-get_template_part( 'partials/s4' );
+<section class="pg-section s5" >
+<?php get_template_part( 'partials/s5' ); ?>
+</section>
 
-get_template_part( 'partials/s5' );
-
-get_template_part( 'partials/s6' );
-
-
+<section class="pg-section s6" >
+<?php get_template_part( 'partials/s6' ); ?>
+</section>
 
 
-get_footer();
+
+<?php get_footer(); ?>

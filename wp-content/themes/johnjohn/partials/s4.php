@@ -35,7 +35,8 @@
       <div class="-mt200">
 
 
-        <div class="highlight -no-ws-r animation" data-animation="animation-fade-in-right" style="background-image: url('<?php echo get_template_directory_uri(); ?>/public/images/surfboard.jpg');">
+        <div class="highlight -no-ws-r">
+          <div class="bg-img animation" data-animation="animation-fade-in-right"></div>
 
           <div class="ss-ease" data-scroll-speed="5">
             <img src="<?php echo get_template_directory_uri(); ?>/public/images/image4.jpg" class="-absolute img-responsive animation" data-animation="animation-fade-in-down" alt="">

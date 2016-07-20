@@ -15,15 +15,16 @@
       <div class="col-xs-12">
         <div class="-relative">
 
-          <div class="card-overlay animation" data-animation="animation-fade-in-down">
+          <div class="card-overlay speed-wrap ss-ease -absolute " data-scroll-speed="9"><div class="animation" data-animation="animation-fade-in-down">
             <div class="content-card">
 
-              <div class="speed-wrap -absolute" data-scroll-speed="9">
+              <!-- <div class="speed-wrap ss-ease -absolute" data-scroll-speed="9"> -->
                 <img src="<?php echo get_template_directory_uri(); ?>/public/images/johnjohn.jpg" alt="" class="img" />
-              </div><!-- /scroll-speed -->
+              <!-- </div> --><!-- /scroll-speed -->
 
               <p class="text">Hey gang, my name is John John Florence. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tempus tincidunt enim, in mattis orci viverra ac. </p>
             </div><!-- .content-card -->
+            </div>
           </div><!-- /card-overlay -->
 
           <div class="flexslider -navoverlay animation" data-animation="animation-fade-in-right">

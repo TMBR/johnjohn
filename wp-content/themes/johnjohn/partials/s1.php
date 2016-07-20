@@ -23,7 +23,7 @@
           <span class="line animation" data-animation="animation-fade-in-left" data-delay="600">Florence</span>
         </h1>
 
-        <a href="#" class="handle -absolute animation" data-animation="animation-fade-in-left" data-delay="300">@john_john_florence</a>
+        <a href="https://www.instagram.com/john_john_florence/?hl=en" target="_blank" class="handle -absolute animation" data-animation="animation-fade-in-left" data-delay="300">@john_john_florence</a>
 
         <div class="reveal animation" data-animation="animation-fade-in-up">
           <div class="videocover"></div>

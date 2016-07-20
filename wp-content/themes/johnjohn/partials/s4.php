@@ -15,7 +15,7 @@
     </div><!-- /col -->
 
     <div class="col-sm-3">
-      <div class="ss10" data-scroll-speed="9">
+      <div data-scroll-speed="9">
         <?php get_template_part( 'partials/s4/rotator' ); ?>
       </div><!-- /scroll speed -->
     </div><!-- /col -->

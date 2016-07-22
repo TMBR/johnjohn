@@ -11,6 +11,18 @@
   }
 }
 
+@include keyframes(video-img) {
+  0% {
+    @include transform(scale(1));
+    @include opacity(1);
+  }
+
+  100% {
+    @include transform(scale(1.5));
+    @include opacity(0.8);
+  }
+}
+
 @include keyframes(bg-change) {
   0% {
     background: $white;

@@ -10454,7 +10454,10 @@ input[type=submit] {
     background-clip: padding-box;
     /* stops bg color from leaking outside the border: */
     -webkit-animation: surfer 1s infinite;
-    animation: surfer 1s infinite; }
+    animation: surfer 1s infinite;
+    transition: -webkit-transform 0.75s ease-out;
+    transition: transform 0.75s ease-out;
+    transition: transform 0.75s ease-out, -webkit-transform 0.75s ease-out; }
 
 .content-card {
   padding-bottom: 30px;
@@ -11090,7 +11093,7 @@ a.handle {
 
 .card-gallery .flex-control-nav.flex-control-paging {
   bottom: 0;
-  height: 5%;
+  height: 100%;
   text-align: left;
   padding-left: 20px; }
   .card-gallery .flex-control-nav.flex-control-paging li {
@@ -11196,7 +11199,8 @@ a.handle {
     background: #FFF; }
 
 .pg-section.s2 .speed-wrap {
-  z-index: 9; }
+  z-index: 9;
+  position: relative; }
 
 .pg-section.s3 {
   margin-top: -150px; }
@@ -11209,7 +11213,7 @@ a.handle {
     top: 200px; }
 
 .pg-section.s5 .speed-wrap {
-  top: 300px; }
+  top: 338px; }
 
 .pg-section.s6 {
   margin-top: 60px; }

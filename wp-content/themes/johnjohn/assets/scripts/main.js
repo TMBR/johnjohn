@@ -327,19 +327,27 @@
 		},
 
 		ScrollSpeed: function() {
+
 			$.fn.moveIt = function(){
 				var $window = $(window);
 				var instances = [];
+				var $element = $(this);
 
 				$(this).each(function(){
 					instances.push(new moveItItem($(this)));
 				});
 
+				// $element.waypoint(function() {
+				// 	$element.addClass('scroll-ready');
+				// });
+
 				window.onscroll = function(){
-					var scrollTop = $window.scrollTop();
-					instances.forEach(function(inst){
-						inst.update(scrollTop);
-					});
+						var scrollTop = $window.scrollTop();
+						//console.log(scrollTop);
+						instances.forEach(function(inst){
+							inst.update(scrollTop);
+						});
+
 				}
 			}
 
@@ -349,8 +357,14 @@
 			};
 
 			moveItItem.prototype.update = function(scrollTop){
+				var elOffset = this.el.offset().top;
+				var distance = (elOffset - scrollTop);
 				var pos = scrollTop / this.speed;
-				this.el.css('transform', 'translateY(' + -pos + 'px)');
+				// var pos = distance / this.speed;
+
+				//if(this.el.hasClass('scroll-ready')){
+					this.el.css('transform', 'translateY(' + -pos + 'px)');
+				//}
 			};
 
 			$(function(){

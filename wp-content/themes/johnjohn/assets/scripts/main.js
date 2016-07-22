@@ -20,6 +20,7 @@
 			SiteApp.Vertspin1();
 			SiteApp.Vertspin2();
 			SiteApp.Lightbox();
+			SiteApp.Waypoint();
 			SiteApp.ScrollSpeed();
 
 			// Call this to show all animited items
@@ -296,6 +297,31 @@
 
 			$('.animation, .animation-visible').each(function() {
 				$(this).addClass('animated');
+			});
+
+		},
+
+		Waypoint: function() {
+
+			$('.js-section').each(function() {
+				var $element = $(this);
+
+				$element.waypoint(function() {
+					$element.addClass('scroll-ready');
+					var sectionClass = $element.attr('data-section');
+					var body = $('body');
+					body.removeClass('pg-s1-active pg-s2-active pg-s3-active pg-s4-active pg-s5-active pg-s6-active');
+					// body.removeClass('s2-active');
+					// body.removeClass('s3-active');
+					// body.removeClass('s4-active');
+					// body.removeClass('s5-active');
+					// body.removeClass('s6-active');
+					body.addClass(sectionClass+'-active');
+
+				}, {
+					offset: '50%'
+				});
+
 			});
 
 		},

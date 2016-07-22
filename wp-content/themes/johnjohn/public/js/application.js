@@ -67,6 +67,7 @@ _throttle = function(func, wait, options) {
 			SiteApp.Vertspin1();
 			SiteApp.Vertspin2();
 			SiteApp.Lightbox();
+			SiteApp.Waypoint();
 			SiteApp.ScrollSpeed();
 
 			// Call this to show all animited items
@@ -347,20 +348,53 @@ _throttle = function(func, wait, options) {
 
 		},
 
+		Waypoint: function() {
+
+			$('.js-section').each(function() {
+				var $element = $(this);
+
+				$element.waypoint(function() {
+					$element.addClass('scroll-ready');
+					var sectionClass = $element.attr('data-section');
+					var body = $('body');
+					body.removeClass('pg-s1-active pg-s2-active pg-s3-active pg-s4-active pg-s5-active pg-s6-active');
+					// body.removeClass('s2-active');
+					// body.removeClass('s3-active');
+					// body.removeClass('s4-active');
+					// body.removeClass('s5-active');
+					// body.removeClass('s6-active');
+					body.addClass(sectionClass+'-active');
+
+				}, {
+					offset: '50%'
+				});
+
+			});
+
+		},
+
 		ScrollSpeed: function() {
+
 			$.fn.moveIt = function(){
 				var $window = $(window);
 				var instances = [];
+				var $element = $(this);
 
 				$(this).each(function(){
 					instances.push(new moveItItem($(this)));
 				});
 
+				// $element.waypoint(function() {
+				// 	$element.addClass('scroll-ready');
+				// });
+
 				window.onscroll = function(){
-					var scrollTop = $window.scrollTop();
-					instances.forEach(function(inst){
-						inst.update(scrollTop);
-					});
+						var scrollTop = $window.scrollTop();
+						//console.log(scrollTop);
+						instances.forEach(function(inst){
+							inst.update(scrollTop);
+						});
+
 				}
 			}
 
@@ -370,8 +404,14 @@ _throttle = function(func, wait, options) {
 			};
 
 			moveItItem.prototype.update = function(scrollTop){
+				var elOffset = this.el.offset().top;
+				var distance = (elOffset - scrollTop);
 				var pos = scrollTop / this.speed;
-				this.el.css('transform', 'translateY(' + -pos + 'px)');
+				// var pos = distance / this.speed;
+
+				//if(this.el.hasClass('scroll-ready')){
+					this.el.css('transform', 'translateY(' + -pos + 'px)');
+				//}
 			};
 
 			$(function(){

@@ -12,6 +12,7 @@
     width: 170px;
     @include border-radius(50%);
     animation: surfer 1s infinite;
+    @include transition-transform(.75s ease-out);
   }
 }
 

@@ -6,6 +6,9 @@
   line-height: 50px;
   @include spacing(400);
   text-transform: uppercase;
+  @include respond-to($screen-sm) {
+    //line-height: 40px;
+  }
   .line {
     display: block;
   }

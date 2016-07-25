@@ -12,6 +12,11 @@
   }
   > .text {
     margin: $gutter*2 0;
+    .s5 & {
+      @include respond-to($screen-sm) {
+        margin: $gutter 0 0;
+      }
+    }
     &.-white-bg {
       margin: 0;
       padding: $gutter*2 0;
@@ -25,7 +30,9 @@
   &.-overlap {
     margin-top: -50%;
     @include relative($z:9);
-
+    @include respond-to($screen-sm) {
+      margin-top: -40%;
+    }
     > .img {
       margin-right: 5%;
       width: 95%;

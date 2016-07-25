@@ -1,3 +1,16 @@
+.pg-section.s5 {
+  @include respond-to($screen-xs) {
+    margin-top: -280px;
+    margin-bottom: 100px;
+  }
+  .speed-wrap {
+    top: 338px;
+    @include respond-to($screen-xs) {
+      top: 208px;
+    }
+  }
+}
+
 .card-gallery {
   margin-top: 120px;
 }
@@ -8,6 +21,9 @@
   left: $col;
   background: $white;
   margin-left: $gutter;
+  @include respond-to($screen-sm) {
+    width: 220px;
+  }
 }
 
 .card-overlay {
@@ -41,4 +57,25 @@
 
 .card-gallery .broken-text {
   margin-left: 30px;
+}
+
+
+/* height of content card at screen-sm = 440px; */
+.-navoverlay .img-bg {
+  display: none;
+  @include respond-to($screen-sm) {
+    display: block;
+    width: 100%;
+    height: 450px;
+    background-size: cover;
+    background-repeat: none;
+    background-position: center center;
+  }
+}
+
+.-navoverlay .img-obj {
+
+  @include respond-to($screen-sm) {
+    display: none!important;
+  }
 }

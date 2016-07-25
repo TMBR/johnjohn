@@ -2,10 +2,10 @@
   padding: 20px 0 20px;
   margin: 0;
   border: none;
-  @include respond-to($screen-md) {
-    padding-top: $gutter;
-    padding-bottom: $gutter;
-  }
+  // @include respond-to($screen-md) {
+  //   padding-top: $gutter;
+  //   padding-bottom: $gutter;
+  // }
 }
 
 .page-header .numberwrap {

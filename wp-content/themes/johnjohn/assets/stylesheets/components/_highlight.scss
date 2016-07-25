@@ -4,6 +4,7 @@
   background-position: top left;
   height: 290px;
   margin-left: 50px;
+  margin-right: 0;
   .broken-text {
     padding-top: 95px;
     height: 290px;
@@ -13,9 +14,12 @@
     //margin-top: 400px;
   }
   .bg-img {
+    margin-right: 15px;
     background-image: url('../../public/images/surfboard-blank.jpg');
     height: 100%;
     width: 100%;
     position: absolute;
+    background-repeat: no-repeat;
+    background-position: top right;
   }
 }

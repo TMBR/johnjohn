@@ -12,6 +12,9 @@
   &.-overlap {
     @include absolute;
     margin-top: -150px;
+    @include respond-to($screen-sm) {
+      margin-top: -50px;
+    }
   }
 }
 

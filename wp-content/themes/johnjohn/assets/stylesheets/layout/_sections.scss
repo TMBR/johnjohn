@@ -1,15 +1,4 @@
-.pg-section.s2 {
-  .speed-wrap {
-    z-index: 9;
-    position: relative;
-  }
-  .rotator {
-    margin-top: 300px;
-    @include respond-to($screen-md) {
-      margin-top: 100px;
-    }
-  }
-}
+
 
 .pg-section.s3 {
   margin-top: -150px;

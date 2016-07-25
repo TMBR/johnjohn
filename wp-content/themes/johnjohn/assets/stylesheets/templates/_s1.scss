@@ -1,0 +1,14 @@
+$logo-h: 144px;
+
+
+.logo-sm {
+  height: $logo-h - 70px;
+  margin-bottom: 50px;
+  @include relative;
+  .logo-wrapper {
+    height: $logo-h;
+    @include absolute($l:50%, $t:-70px);
+    @include transform(translateX(-50%));
+  }
+}
+

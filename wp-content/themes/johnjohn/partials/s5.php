@@ -29,11 +29,13 @@
 
           <div class="flexslider -navoverlay animation" data-animation="animation-fade-in-right">
             <ul class="slides">
-              <li><img src="<?php echo get_template_directory_uri(); ?>/public/images/slide1.jpg" alt="" class="img-responsive" /></li>
+              <li>
+              <div class="img-bg" style="background-image: url('<?php echo get_template_directory_uri(); ?>/public/images/slide1.jpg');"></div>
+              <img src="<?php echo get_template_directory_uri(); ?>/public/images/slide1.jpg" alt="" class="img-obj img-responsive" /></li>
 
-              <li><img src="<?php echo get_template_directory_uri(); ?>/public/images/slide2.jpg" alt="" class="img-responsive" /></li>
+              <li><div class="img-bg" style="background-image: url('<?php echo get_template_directory_uri(); ?>/public/images/slide2.jpg');"></div><img src="<?php echo get_template_directory_uri(); ?>/public/images/slide2.jpg" alt="" class="img-obj img-responsive" /></li>
 
-              <li><img src="<?php echo get_template_directory_uri(); ?>/public/images/slide3.jpg" alt="" class="img-responsive" /></li>
+              <li><div class="img-bg" style="background-image: url('<?php echo get_template_directory_uri(); ?>/public/images/slide3.jpg');"></div><img src="<?php echo get_template_directory_uri(); ?>/public/images/slide3.jpg" alt="" class="img-obj img-responsive" /></li>
             </ul><!-- /slides -->
           </div><!-- /flexslider -->
 

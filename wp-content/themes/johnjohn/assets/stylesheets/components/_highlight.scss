@@ -2,15 +2,20 @@
   position: relative;
   background-repeat: no-repeat;
   background-position: top left;
-
+  height: 290px;
   margin-left: 50px;
-
   .broken-text {
-      padding-top: 95px;
-
+    padding-top: 95px;
+    height: 290px;
   }
   img {
-    margin-left: 25%;
-    margin-top: -40px;
+    //margin-left: 25%;
+    //margin-top: 400px;
+  }
+  .bg-img {
+    background-image: url('../../public/images/surfboard-blank.jpg');
+    height: 100%;
+    width: 100%;
+    position: absolute;
   }
 }

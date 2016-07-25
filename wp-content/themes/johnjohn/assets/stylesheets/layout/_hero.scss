@@ -8,21 +8,18 @@
   @extend .-heroheight;
 }
 
-
 .page-hero .leftwrap {
-
   position: absolute;
   width: 100%;
   top: 50%;
   @include transform(translateY(-50%));
   height: 45%;
   min-height: 235px;
-
   .logo-wrapper {
     position: absolute;
     top: 0;
     left: 50%;
-     @include transform(translateX(-50%));
+    @include transform(translateX(-50%));
   }
   .play-button {
     position: absolute;
@@ -32,12 +29,10 @@
   }
 }
 
-
-
 .page-hero .reveal {
-position: relative;
-width: 100%;
-@extend .-heroheight;
+  position: relative;
+  width: 100%;
+  @extend .-heroheight;
 }
 
 .videocover {
@@ -55,23 +50,20 @@ width: 100%;
 
 .page-hero .broken-text {
   left: 66.66666%;
-
   z-index: 3;
   top: -50px;
   @include transition(all .75s);
-
 }
 
 .vid-reveal .page-hero .broken-text {
   top: -120px;
-     @include opacity(0);
-
+  @include opacity(0);
 }
 
 a.handle {
-  color: #fff;
+  color: $white;
   font-weight: $fw-semi;
-  bottom: 30px;
+  bottom: 45px;
   left: 33%;
   z-index: 3;
   @include transition(all .5s);

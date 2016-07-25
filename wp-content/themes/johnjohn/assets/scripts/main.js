@@ -20,6 +20,8 @@
 			SiteApp.Vertspin1();
 			SiteApp.Vertspin2();
 			SiteApp.Lightbox();
+			SiteApp.Waypoint();
+			SiteApp.ScrollSpeed();
 
 			// Call this to show all animited items
 			// SiteApp.ShowAnimated();
@@ -73,6 +75,7 @@
 
 			// Window Scroll functions
 			$(window).on('scroll', _throttle(function(){
+				//if ( $(window).scrollTop() > 10) {}
 				/* do your normal scroll stuff here, but it'll be
 				 * more-reasonably controlled, so as to not peg
 				 * the host machine's processor */
@@ -280,7 +283,7 @@
 					}
 					delay = 0;
 				}, {
-					offset: '70%'
+					offset: '90%'
 				});
 
 			});
@@ -296,6 +299,77 @@
 				$(this).addClass('animated');
 			});
 
+		},
+
+		Waypoint: function() {
+
+			$('.sec-trigger').each(function() {
+				var $element = $(this);
+
+				$element.waypoint(function() {
+					$element.addClass('scroll-ready');
+					var sectionClass = $element.attr('data-section');
+					var body = $('body');
+					body.removeClass('pg-s1-active pg-s2-active pg-s3-active pg-s4-active pg-s5-active pg-s6-active pg-footer-active');
+					// body.removeClass('s2-active');
+					// body.removeClass('s3-active');
+					// body.removeClass('s4-active');
+					// body.removeClass('s5-active');
+					// body.removeClass('s6-active');
+					body.addClass(sectionClass+'-active');
+
+				}, {
+					offset: '50%'
+				});
+
+			});
+
+		},
+
+		ScrollSpeed: function() {
+
+			$.fn.moveIt = function(){
+				var $window = $(window);
+				var instances = [];
+				var $element = $(this);
+
+				$(this).each(function(){
+					instances.push(new moveItItem($(this)));
+				});
+
+				// $element.waypoint(function() {
+				// 	$element.addClass('scroll-ready');
+				// });
+
+				window.onscroll = function(){
+						var scrollTop = $window.scrollTop();
+						//console.log(scrollTop);
+						instances.forEach(function(inst){
+							inst.update(scrollTop);
+						});
+
+				}
+			}
+
+			var moveItItem = function(el){
+				this.el = $(el);
+				this.speed = parseInt(this.el.attr('data-scroll-speed'));
+			};
+
+			moveItItem.prototype.update = function(scrollTop){
+				var elOffset = this.el.offset().top;
+				var distance = (elOffset - scrollTop);
+				var pos = scrollTop / this.speed;
+				// var pos = distance / this.speed;
+
+				//if(this.el.hasClass('scroll-ready')){
+					this.el.css('transform', 'translateY(' + -pos + 'px)');
+				//}
+			};
+
+			$(function(){
+					$('[data-scroll-speed]').moveIt();
+			});
 		}
 
 

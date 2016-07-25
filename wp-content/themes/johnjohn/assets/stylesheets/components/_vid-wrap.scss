@@ -11,7 +11,7 @@
 }
 
 .vid-wrap img {
-  @include transition-transform(.5s ease-in, opacity .5s ease-in);
+  @include transition-transform(1s ease-out, opacity .5s ease-in);
 }
 
 .vid-wrap:hover {
@@ -34,6 +34,7 @@
 .vid-wrap.-special img {
   width: 100%;
   height: auto;
+  @include transition-transform(2s ease-out, opacity .5s ease-in);
 }
 .vid-wrap.-special .play-button {
   @include absolute($t:44%,$l:30.5%,$z:1);
@@ -48,18 +49,23 @@
   left: 55%;
   top: 30%;
   z-index: 1;
-  @include transition-transform(.75s ease-out);
+  @include transition-transform(1.5s ease-out);
 }
+
+//body.pg-s3-active .vid-wrap.-special,
 .vid-wrap.-special:hover {
   .play-button {
     background: $aqua;
   }
   img {
-    @include transform(scale(1.01));
+    @include transform(scale(1.1));
     @include opacity(0.8);
   }
 }
+//body.pg-s3-active .vid-wrap .surfer,
 .vid-wrap:hover .surfer {
-  @include transform(translate(10px, 10px) rotate(2deg));
+  @include transform(translate(20px, 20px) rotate(3deg));
 }
+
+
 

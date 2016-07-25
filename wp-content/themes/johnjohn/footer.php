@@ -4,6 +4,7 @@
 </div>
 
 <footer class="site-footer">
+
 	<img src="<?php echo get_template_directory_uri(); ?>/public/images/footer.jpg" class="img-responsive animation" data-animation="animation-fade-in-down" alt="" />
 	<div class="footer-content animation" data-animation="animation-fade-in-down">
 		<div class="footer-logo">
@@ -20,6 +21,7 @@
 		<span class="top"></a>
 		</a>
 	</div><!-- /footer-content -->
+  <div class="sec-trigger" data-section="pg-footer"></div>
 </footer><!-- site-footer -->
 
 </div><!-- .body -->

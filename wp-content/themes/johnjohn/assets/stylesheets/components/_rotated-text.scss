@@ -24,9 +24,28 @@
 
 .rotated-text a {
   color: $text-gray;
+  //background: $white;
+  @include relative;
+  // &:after {
+  //   content: '';
+  //   background: $white;
+  //   width: 100%;
+  //   height: 70%;
+  //   @include absolute;
+  //   top: 5%;
+  //   left: 0;
+  //   z-index: -1;
+  // }
   &:hover {
     color: $orange;
   }
+  //body.pg-footer-active &,
+  body.pg-s5-active & {
+    color: $very-light-gray;
+    // color: $aqua;
+    // color: #007FFF;
+  }
+
 }
 
 .rotated-text > .rule {
@@ -36,6 +55,11 @@
   margin-top: -2px;
   @include absolute($t:50%,$z:2);
   transition: all .2s;
+  //body.pg-footer-active &,
+  body.pg-s5-active & {
+    background: $very-light-gray;
+  }
+
 }
 
 

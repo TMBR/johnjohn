@@ -2,30 +2,30 @@
 
 .content-card {
   padding-bottom: $gutter*2;
-
   > .img {
     max-width: 100%;
     width: 100%;
     height: auto;
   }
-
   > .heading {
     margin: $gutter*2 0 0;
   }
-
   > .text {
     margin: $gutter*2 0;
+    &.-white-bg {
+      margin: 0;
+      padding: $gutter*2 0;
+      background: $white;
+      margin-right: 5%;
+      width: 95%;
+    }
   }
 
-
-
-
-
   /* VARIANTS */
-
   &.-overlap {
     margin-top: -50%;
     @include relative($z:9);
+
     > .img {
       margin-right: 5%;
       width: 95%;

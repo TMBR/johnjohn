@@ -13,7 +13,7 @@
    		</div><!-- /logo-wrapper -->
    	</div><!-- /footer-logo -->
 
-		<p class="text">Copyright &copy;<br/> Elegant Seagulls, Inc.<br/> All Rights Reserved<br/> I'm Jack Dusty.</p>
+		<p class="text">Copyright &copy;<br class="hidden-sm hidden-xs"/> Elegant Seagulls, Inc.<br/> All Rights Reserved<br/> I'm Jack Dusty.</p>
 
 
 		<a href="mailto:info@johnjohn.com" class="link">info@johnjohn.com</a>

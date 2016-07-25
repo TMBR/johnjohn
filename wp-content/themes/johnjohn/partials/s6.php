@@ -1,13 +1,13 @@
 <div class="container-fluid">
   <div class="row">
 
-    <div class="col-xs-4 col-xs-offset-1">
+    <div class="col-sm-4 col-sm-offset-1">
       <div class="speed-wrap -absolute ss-ease" data-scroll-speed="9">
         <?php get_template_part( 'partials/s6/rotator' ); ?>
       </div><!-- /scroll-speed -->
     </div><!-- /col -->
 
-    <div class="col-xs-5 col-xs-offset-1">
+    <div class="col-md-5 col-md-offset-1 col-sm-6">
       <?php get_template_part( 'partials/s6/content-card' ); ?>
 
       <div class="vert-caption -right _pull-left animation" data-animation="animation-fade-in-down">

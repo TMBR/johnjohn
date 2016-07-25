@@ -9,7 +9,7 @@
           </div><!-- .logo-wrapper -->
         </div>
       </div><!-- /col -->
-      <div class="col-md-3 col-sm-2 -heroheight">
+      <div class="col-md-3 col-xs-2 -heroheight">
         <div class="leftwrap">
 
           <div class="logo-wrapper hidden-sm hidden-xs">
@@ -22,9 +22,9 @@
       </div><!-- /col -->
 
 
-      <div class="col-md-9 col-sm-10 _unpad-l">
+      <div class="col-md-9 col-xs-10 _unpad-l">
 
-        <h1 class="broken-text -absolute hidden-sm hidden-xs">
+        <h1 class="broken-text -absolute">
           <span class="line animation" data-animation="animation-fade-in-left">I am</span>
           <span class="line animation" data-animation="animation-fade-in-left" data-delay="300">John John</span>
           <span class="line animation" data-animation="animation-fade-in-left" data-delay="600">Florence</span>

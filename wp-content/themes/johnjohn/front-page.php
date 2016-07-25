@@ -21,19 +21,19 @@ get_header(); ?>
   <div class="sec-trigger" data-section="pg-s3"></div>
 </section>
 
-<section class="pg-section s4 js-section js-s4">
+<section class="pg-section s4 js-section js-s4 hidden-xs">
 <div class="sec-trigger" data-section="pg-s4"></div>
 <?php get_template_part( 'partials/s4' ); ?>
 <div class="sec-trigger" data-section="pg-s4"></div>
 </section>
 
-<section class="pg-section s5 js-section js-s5">
+<section class="pg-section s5 js-section js-s5 ">
 <div class="sec-trigger" data-section="pg-s5"></div>
 <?php get_template_part( 'partials/s5' ); ?>
 <div class="sec-trigger" data-section="pg-s5"></div>
 </section>
 
-<section class="pg-section s6 js-section js-s6">
+<section class="pg-section s6 js-section js-s6 hidden-xs">
 <div class="sec-trigger" data-section="pg-s6"></div>
 <?php get_template_part( 'partials/s6' ); ?>
 <div class="sec-trigger" data-section="pg-s6"></div>

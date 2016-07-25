@@ -2,6 +2,9 @@
 
 .-heroheight {
   height: calc(100vh - 110px);
+  @include respond-to($screen-md) {
+    height: calc(70vh - 110px);
+  }
 }
 
 .page-hero {

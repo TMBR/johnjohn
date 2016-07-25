@@ -3,6 +3,12 @@
     z-index: 9;
     position: relative;
   }
+  .rotator {
+    margin-top: 300px;
+    @include respond-to($screen-md) {
+      margin-top: 100px;
+    }
+  }
 }
 
 .pg-section.s3 {

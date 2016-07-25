@@ -1,5 +1,5 @@
 
-<div id="spinner1" class="rotator -vert animation" data-animation="animation-fade-in-up" style="margin-top: 300px;">
+<div id="spinner1" class="rotator -vert animation" data-animation="animation-fade-in-up">
 
   <div class="img-wrap">
     <img id="vert-img1" src="<?php echo get_template_directory_uri(); ?>/public/images/prod1/img7.jpg" alt="" />

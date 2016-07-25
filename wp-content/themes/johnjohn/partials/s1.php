@@ -2,11 +2,17 @@
 <div class="page-hero -relative">
   <div class="container-fluid">
     <div class="row">
-
-      <div class="col-sm-3 -heroheight">
+      <div class="col-xs-12 hidden-lg hidden-md">
+        <div class="logo-sm">
+          <div class="logo-wrapper">
+            <?php get_template_part( 'partials/global/logo' ); ?>
+          </div><!-- .logo-wrapper -->
+        </div>
+      </div><!-- /col -->
+      <div class="col-md-3 col-xs-2 -heroheight">
         <div class="leftwrap">
 
-          <div class="logo-wrapper">
+          <div class="logo-wrapper hidden-sm hidden-xs">
             <?php get_template_part( 'partials/global/logo' ); ?>
           </div><!-- .logo-wrapper -->
 
@@ -16,7 +22,7 @@
       </div><!-- /col -->
 
 
-      <div class="col-sm-9 _unpad-l">
+      <div class="col-md-9 col-xs-10 _unpad-l">
 
         <h1 class="broken-text -absolute">
           <span class="line animation" data-animation="animation-fade-in-left">I am</span>

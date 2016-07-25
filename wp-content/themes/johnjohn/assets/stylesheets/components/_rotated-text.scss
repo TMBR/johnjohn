@@ -91,6 +91,11 @@
     &.-center {
       top: 50%;
       @include transform(rotate(-90deg) translateX(50%));
+      .ps-section.s3 & {
+        @include respond-to($screen-sm) {
+          top: 0;
+        }
+      }
     }
   }
 

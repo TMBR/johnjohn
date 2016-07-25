@@ -27,12 +27,9 @@
   background: $text-gray;
 }
 
-
-
 .logo-wrapper .logo.-flipped {
   @include transform(rotate(180deg));
 }
-
 
 .logo-wrapper.-light .logo {
   color: $white;

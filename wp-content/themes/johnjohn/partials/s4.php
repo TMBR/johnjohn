@@ -31,7 +31,7 @@
     </div><!-- /col -->
 
 
-    <div class="col-sm-6">
+    <div class="col-md-6 col-md-offset-0 col-sm-8 col-sm-offset-4">
       <div class="-mt100">
 
 

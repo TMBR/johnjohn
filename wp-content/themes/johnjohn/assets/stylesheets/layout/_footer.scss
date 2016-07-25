@@ -2,15 +2,36 @@
   @include relative
   margin: $gutter;
   text-align: center;
+  min-height: 500px;
 }
 
 .site-footer img {
   width: 100%;
   height: auto;
+  @include respond-to($screen-sm) {
+    display: none;
+  }
+}
+
+.site-footer .img-bg {
+  display: none;
+  @include respond-to($screen-sm) {
+    display: block;
+    width: 100%;
+    height: 100%;
+    @include absolute($t:0, $l:0);
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
 }
 .site-footer .footer-content {
   @include absolute($b:100px,$l:50%,$z:999);
   @include transform(translateX(-50%));
+  @include respond-to($screen-sm) {
+    bottom: 10px;
+  }
 }
 
 .site-footer .footer-logo {

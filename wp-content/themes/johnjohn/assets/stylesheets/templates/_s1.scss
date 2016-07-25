@@ -1,7 +1,26 @@
+$logo-h: 144px;
+
+
+.logo-sm {
+  //height: $logo-h - 70px;
+  height: $logo-h;
+  margin-bottom: 120px;
+  @include relative;
+  .logo-wrapper {
+    height: $logo-h;
+    @include absolute($l:50%, $t:-70px);
+    top: 0;
+    @include transform(translateX(-50%));
+  }
+}
+
 
 
 .-heroheight {
   height: calc(100vh - 110px);
+  @include respond-to($screen-md) {
+    height: calc(70vh - 110px);
+  }
 }
 
 .page-hero {
@@ -15,6 +34,10 @@
   @include transform(translateY(-50%));
   height: 45%;
   min-height: 235px;
+  @include respond-to($screen-sm) {
+    height: 100%;
+    min-height: 0;
+  }
   .logo-wrapper {
     position: absolute;
     top: 0;
@@ -26,6 +49,12 @@
     bottom: 0;
     left: 50%;
     margin-left: -25px;
+    @include respond-to($screen-sm) {
+      bottom: 50%;
+      margin-bottom: -25px;
+      // left: 0;
+      // margin-left: 0;
+    }
   }
 }
 
@@ -53,6 +82,11 @@
   z-index: 3;
   top: -50px;
   @include transition(all .75s);
+  @include respond-to($screen-sm) {
+    //top: -40px;
+    // bottom: -50px;
+    // left: 50%;
+  }
 }
 
 .vid-reveal .page-hero .broken-text {
@@ -67,6 +101,9 @@ a.handle {
   left: 33%;
   z-index: 3;
   @include transition(all .5s);
+  @include respond-to($screen-sm) {
+    left: 41.6666666667%;
+  }
 }
 
 .vid-reveal a.handle,

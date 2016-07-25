@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <div class="row">
 
-      <div class="col-xs-9 col-xs-offset-3">
+      <div class="col-md-9 col-md-offset-3 col-sm-8 col-sm-offset-4 col-xs-10 col-xs-offset-2">
         <h3 class="broken-text -inline animation" data-animation="animation-fade-in-down">
           <span class="line animation" data-animation="animation-fade-in-left">Just</span>
           <span class="line -center animation" data-animation="animation-fade-in-left" data-delay="200">Another</span>
@@ -29,11 +29,13 @@
 
           <div class="flexslider -navoverlay animation" data-animation="animation-fade-in-right">
             <ul class="slides">
-              <li><img src="<?php echo get_template_directory_uri(); ?>/public/images/slide1.jpg" alt="" class="img-responsive" /></li>
+              <li>
+              <div class="img-bg" style="background-image: url('<?php echo get_template_directory_uri(); ?>/public/images/slide1.jpg');"></div>
+              <img src="<?php echo get_template_directory_uri(); ?>/public/images/slide1.jpg" alt="" class="img-obj img-responsive" /></li>
 
-              <li><img src="<?php echo get_template_directory_uri(); ?>/public/images/slide2.jpg" alt="" class="img-responsive" /></li>
+              <li><div class="img-bg" style="background-image: url('<?php echo get_template_directory_uri(); ?>/public/images/slide2.jpg');"></div><img src="<?php echo get_template_directory_uri(); ?>/public/images/slide2.jpg" alt="" class="img-obj img-responsive" /></li>
 
-              <li><img src="<?php echo get_template_directory_uri(); ?>/public/images/slide3.jpg" alt="" class="img-responsive" /></li>
+              <li><div class="img-bg" style="background-image: url('<?php echo get_template_directory_uri(); ?>/public/images/slide3.jpg');"></div><img src="<?php echo get_template_directory_uri(); ?>/public/images/slide3.jpg" alt="" class="img-obj img-responsive" /></li>
             </ul><!-- /slides -->
           </div><!-- /flexslider -->
 

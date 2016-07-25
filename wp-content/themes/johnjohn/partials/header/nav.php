@@ -1,4 +1,4 @@
-<section class="rotated-text -fixed -left">
+<section class="rotated-text -fixed -left hidden-sm hidden-xs">
 
     <ul class="content -menu animation" data-animation="animation-fade-in-left">
       <li><a href="#">About</a></li>
